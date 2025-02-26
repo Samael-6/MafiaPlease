@@ -6,7 +6,6 @@ using System.Collections.Generic;
 public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     private Vector2 startPos;
-    private float rotationFactor = 10f;
     private bool isDragging = false;
 
     public float swipeThreshold = 200f;
@@ -18,12 +17,15 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     private static int currentIndex = 0; // Index global de la liste
 
     private Swipe otherSwipe; // Référence à l'autre carte
-    private Quaternion originalRotation; // Rotation d'origine de la carte
+    private Vector3 originalPosition; // Position d'origine de la carte
+
+    private RectTransform canvasRect; // Référence à la taille du canevas
 
     void Start()
     {
         startPos = transform.position;
-        originalRotation = transform.rotation;  // Sauvegarder la rotation d'origine
+        originalPosition = transform.position;  // Sauvegarder la position d'origine
+        canvasRect = cardParent.GetComponent<RectTransform>(); // Obtenez la taille du canevas
         FindOtherSwipe();
         UpdateCardImage(); // Affiche la première image
     }
@@ -50,11 +52,9 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     {
         if (!isDragging) return;
 
+        // Déplacement horizontal uniquement
         Vector2 newPos = (Vector2)transform.position + new Vector2(eventData.delta.x, 0);
         transform.position = newPos;
-
-        float rotationZ = (newPos.x - startPos.x) / rotationFactor;
-        transform.rotation = Quaternion.Euler(0, 0, rotationZ);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -62,45 +62,63 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         isDragging = false;
         float swipeDistance = transform.position.x - startPos.x;
 
-        if (Mathf.Abs(swipeDistance) > swipeThreshold)
+        // Vérification si la carte sort du canevas
+        if (IsOutOfCanvas())
         {
-            if (swipeDistance > 0)
-                SwipeRight();
-            else
-                SwipeLeft();
+            ResetPosition(); // Retour à la position d'origine si elle sort du canevas
         }
         else
         {
-            ResetPosition();
+            if (Mathf.Abs(swipeDistance) > swipeThreshold)
+            {
+                if (swipeDistance > 0)
+                    SwipeRight();
+                else
+                    SwipeLeft();
+            }
+            else
+            {
+                ResetPosition(); // Retour au centre si le swipe n'est pas assez grand
+            }
         }
+    }
+
+    // Vérification si la carte est sortie du canevas
+    bool IsOutOfCanvas()
+    {
+        Vector3[] canvasCorners = new Vector3[4];
+        canvasRect.GetWorldCorners(canvasCorners); // Obtenir les coins du canevas en coordonnées mondiales
+
+        // Vérification si le coin de la carte dépasse du canevas
+        if (transform.position.x < canvasCorners[0].x || transform.position.x > canvasCorners[2].x)
+        {
+            return true;
+        }
+        return false;
     }
 
     void SwipeRight()
     {
-        LeanTween.moveX(gameObject, transform.position.x + 1000, moveSpeed)
+        LeanTween.moveX(gameObject, transform.position.x + 1000, moveSpeed * 5)
             .setEase(LeanTweenType.easeInOutQuad)
             .setOnComplete(RepositionSwipe);
-        LeanTween.rotateZ(gameObject, 15, moveSpeed);  // Rotation légère pendant le swipe
     }
 
     void SwipeLeft()
     {
-        LeanTween.moveX(gameObject, transform.position.x - 1000, moveSpeed)
+        LeanTween.moveX(gameObject, transform.position.x - 1000, moveSpeed * 5)
             .setEase(LeanTweenType.easeInOutQuad)
             .setOnComplete(RepositionSwipe);
-        LeanTween.rotateZ(gameObject, -15, moveSpeed);  // Rotation légère pendant le swipe
     }
 
     void ResetPosition()
     {
-        LeanTween.move(gameObject, startPos, 0.2f).setEase(LeanTweenType.easeOutBounce); // Retour rapide au centre
-        LeanTween.rotateZ(gameObject, 0, 0.2f);  // Réinitialisation de la rotation
+        LeanTween.move(gameObject, originalPosition, 0.2f).setEase(LeanTweenType.easeOutBounce); // Retour rapide au centre
     }
 
     void RepositionSwipe()
     {
-        transform.position = startPos;
-        transform.rotation = originalRotation;  // Réinitialisation de la rotation à l'originale
+        transform.position = originalPosition;  // Réinitialisation de la position à l'originale
 
         // Change l'image de la carte en prenant le prochain élément de la liste
         IncrementIndex();
