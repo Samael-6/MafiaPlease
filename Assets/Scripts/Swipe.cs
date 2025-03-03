@@ -45,6 +45,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        print(canvasRect);
         isDragging = true;
     }
 
@@ -52,29 +53,26 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     {
         if (!isDragging) return;
 
-        // Déplacement horizontal uniquement
-        Vector2 newPos = (Vector2)transform.position + new Vector2(eventData.delta.x, 0);
+        // Déplacement libre dans toutes les directions
+        Vector2 newPos = (Vector2)transform.position + eventData.delta;
         transform.position = newPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         isDragging = false;
-        float swipeDistance = transform.position.x - startPos.x;
+        float swipeDistance = Vector2.Distance(transform.position, startPos);
 
         // Vérification si la carte sort du canevas
         if (IsOutOfCanvas())
         {
-            ResetPosition(); // Retour à la position d'origine si elle sort du canevas
+            HideAndResetCard(); // Rendre invisible et réinitialiser
         }
         else
         {
-            if (Mathf.Abs(swipeDistance) > swipeThreshold)
+            if (swipeDistance > swipeThreshold)
             {
-                if (swipeDistance > 0)
-                    SwipeRight();
-                else
-                    SwipeLeft();
+                SwipeAway();
             }
             else
             {
@@ -89,36 +87,32 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         Vector3[] canvasCorners = new Vector3[4];
         canvasRect.GetWorldCorners(canvasCorners); // Obtenir les coins du canevas en coordonnées mondiales
 
-        // Vérification si le coin de la carte dépasse du canevas
-        if (transform.position.x < canvasCorners[0].x || transform.position.x > canvasCorners[2].x)
+        // Vérifie si la carte dépasse les bords du canevas
+        if (transform.position.x < canvasCorners[0].x || transform.position.x > canvasCorners[2].x ||
+            transform.position.y < canvasCorners[0].y || transform.position.y > canvasCorners[2].y)
         {
             return true;
         }
         return false;
     }
 
-    void SwipeRight()
+    void SwipeAway()
     {
-        LeanTween.moveX(gameObject, transform.position.x + 1000, moveSpeed * 5)
+        LeanTween.move(gameObject, transform.position * 2, moveSpeed)
             .setEase(LeanTweenType.easeInOutQuad)
-            .setOnComplete(RepositionSwipe);
+            .setOnComplete(HideAndResetCard);
     }
 
-    void SwipeLeft()
+    void HideAndResetCard()
     {
-        LeanTween.moveX(gameObject, transform.position.x - 1000, moveSpeed * 5)
-            .setEase(LeanTweenType.easeInOutQuad)
-            .setOnComplete(RepositionSwipe);
+        gameObject.SetActive(false); // Rendre la carte invisible
+        Invoke(nameof(ResetCardPosition), 0.3f); // La faire réapparaître après 0.3s
     }
 
-    void ResetPosition()
+    void ResetCardPosition()
     {
-        LeanTween.move(gameObject, originalPosition, 0.2f).setEase(LeanTweenType.easeOutBounce); // Retour rapide au centre
-    }
-
-    void RepositionSwipe()
-    {
-        transform.position = originalPosition;  // Réinitialisation de la position à l'originale
+        transform.position = originalPosition;  // Réinitialisation de la position
+        gameObject.SetActive(true); // Rendre la carte visible à nouveau
 
         // Change l'image de la carte en prenant le prochain élément de la liste
         IncrementIndex();
@@ -127,6 +121,11 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         // Met cette carte en arrière et active l'autre
         transform.SetAsFirstSibling();
         otherSwipe.transform.SetAsLastSibling();
+    }
+
+    void ResetPosition()
+    {
+        LeanTween.move(gameObject, originalPosition, 0.2f).setEase(LeanTweenType.easeOutBounce); // Retour rapide au centre
     }
 
     void IncrementIndex()
