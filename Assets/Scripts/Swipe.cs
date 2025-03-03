@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
@@ -23,7 +24,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     {
         if (isDragging)
         {
-            // La carte suit exactement le doigt sur X et Y
+            // La carte suit le doigt sur X et Y
             Vector3 newPosition = transform.position;
             newPosition.x += eventData.delta.x;
             newPosition.y += eventData.delta.y;
@@ -43,10 +44,17 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         }
         else
         {
-            // Si le swipe est suffisant, envoie la carte hors de l'écran
+            // Si le swipe est suffisant, envoie la carte hors de l'écran et reset après
             float targetX = swipeDistanceX > 0 ? outOfScreenX : -outOfScreenX;
             LeanTween.moveX(gameObject, targetX, 0.3f).setEase(LeanTweenType.easeInQuad)
-                .setOnComplete(() => gameObject.SetActive(false)); // Désactiver la carte après le swipe
+                .setOnComplete(() => StartCoroutine(ResetCard())); // Appelle la coroutine ResetCard()
         }
+    }
+
+    private IEnumerator ResetCard()
+    {
+        yield return new WaitForSeconds(0.5f);  // Attendre avant de reset
+        transform.position = startPosition;  // Remettre la carte à sa position d'origine
+        gameObject.SetActive(true);  // Réactiver la carte (au cas où elle est désactivée)
     }
 }
