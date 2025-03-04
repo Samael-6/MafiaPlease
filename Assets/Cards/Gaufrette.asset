@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
+  m_Name: Gaufrette
+  m_EditorClassIdentifier: 
+  name: Gaufrette
+  informations: "Ikiga\xEF"
+  rightchoice: Nofun
+  leftchoice: NoMonney
+  artwork: {fileID: 0}
+  police: 0
+  mafia: 0
+  famille: 0
+  MentalHealth: 0
+  argent: 0

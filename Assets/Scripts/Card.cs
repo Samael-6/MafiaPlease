@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 [CreateAssetMenu(fileName = "New Card",  menuName = "Card")]
 public class Card : ScriptableObject
@@ -19,8 +20,10 @@ public class Card : ScriptableObject
     public int MentalHealth;
     public int argent;
 
+    public bool IsSwap;
     public void print()
     {
         Debug.Log(name + ": " + informations);
     }
+
 }
