@@ -7,7 +7,10 @@ public class CardsContainer : MonoBehaviour
     public int i;
     private int k;
     
-    public List<Card> Cards;
+    public List<Card> ChapterCards;
+    public List<Card> EventCards;
+
+    private List<Card> Cards;
 
     void Start()
     {
@@ -17,12 +20,23 @@ public class CardsContainer : MonoBehaviour
 
     public void Shuffle () 
     { 
-        i = Cards.Count;
+        i = ChapterCards.Count;
         while (i > 0)
         {
             i--;
             k = Random.Range(0, i);
-            (Cards[k], Cards[i]) = (Cards[i], Cards[k]);            
+            (ChapterCards[k], ChapterCards[i]) = (ChapterCards[i], ChapterCards[k]);            
         }
+    }
+
+    public void AddEvent()
+    {
+        int j = 0;
+        int c = EventCards.Count - 1;
+        for (int x = (ChapterCards.Count - 1) + c; x >= 0; x--)
+        {
+            j = 0;
+        }
+
     }
 }

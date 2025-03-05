@@ -20,7 +20,7 @@ public class CardDisplay : MonoBehaviour
     void Start()
     {
         index = 0;
-        card = cardsContainer.Cards[index];
+        card = cardsContainer.ChapterCards[index];
         informations.text = card.informations;
         artwork.sprite = card.artwork;
         rightchoice.text = card.rightchoice;
@@ -29,15 +29,15 @@ public class CardDisplay : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("CardDisplay : " + cardsContainer.Cards);
+        Debug.Log("CardDisplay : " + cardsContainer.ChapterCards);
     }
 
     public void CardUpdate()
     {
-        if (index < cardsContainer.Cards.Count - 1)
+        if (index < cardsContainer.ChapterCards.Count - 1)
         {
             index++;
-            card = cardsContainer.Cards[index];
+            card = cardsContainer.ChapterCards[index];
             informations.text = card.informations;
             artwork.sprite = card.artwork;
             rightchoice.text = card.rightchoice;
