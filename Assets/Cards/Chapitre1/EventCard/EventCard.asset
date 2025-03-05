@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
   m_Name: EventCard
   m_EditorClassIdentifier: 
-  name: 
-  informations: 
-  rightchoice: 
-  leftchoice: 
+  name: 00000
+  informations: START
+  rightchoice: LOSE
+  leftchoice: 11111
   artwork: {fileID: 0}
   police: 0
   mafia: 0

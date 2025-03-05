@@ -10,11 +10,12 @@ public class CardsContainer : MonoBehaviour
     public List<Card> ChapterCards;
     public List<Card> EventCards;
 
-    private List<Card> Cards;
+    public List<Card> Cards;
 
     void Start()
     {
         Shuffle();
+        AddEvent();
         i = 0;
     }
 
@@ -31,12 +32,32 @@ public class CardsContainer : MonoBehaviour
 
     public void AddEvent()
     {
-        int j = 0;
-        int c = EventCards.Count - 1;
-        for (int x = (ChapterCards.Count - 1) + c; x >= 0; x--)
+        int x = ChapterCards.Count;
+        int c = EventCards.Count;
+        int ChapterIndex = 0;
+        int EventIndex = 0;
+        int CardIndex = 0;
+        float AddIndex = ((100 - ((c * 100) / x)) * x) / 100;
+        for (int maxi = x + c - 2; maxi >= 0; maxi--)
         {
-            j = 0;
-        }
+            if (CardIndex == 0)
+            {
+                Cards.Add(ChapterCards[ChapterIndex]);
+                ChapterIndex++;
+            }
 
+            if (CardIndex % AddIndex == 0)
+            {
+                Cards.Add(EventCards[EventIndex]);
+                EventIndex++;
+            }
+
+            else
+            {
+                Cards.Add(ChapterCards[ChapterIndex]);
+                ChapterIndex++;
+            }
+            CardIndex++;
+        }
     }
 }

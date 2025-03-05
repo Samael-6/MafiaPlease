@@ -737,6 +737,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chapitre1
       objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: EventCards.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: ChapterCards.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'EventCards.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d879674c716aa6347adfa319bdcc7cce, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'EventCards.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 10eb610eda151d6429ae6adeed5c60ac, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'ChapterCards.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b240434a5a9eb8846a0f307253ae2f28, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'ChapterCards.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b4cac9a0706c024884563731f84654c, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'ChapterCards.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f1889a369efd05149a67998c04e449d3, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'ChapterCards.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 82a0ce9fb9d4afc4dad15a61ca2dedc1, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'ChapterCards.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b240434a5a9eb8846a0f307253ae2f28, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'ChapterCards.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f1889a369efd05149a67998c04e449d3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

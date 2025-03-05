@@ -27,11 +27,6 @@ public class CardDisplay : MonoBehaviour
         leftchoice.text = card.leftchoice;
     }
 
-    void Update()
-    {
-        Debug.Log("CardDisplay : " + cardsContainer.ChapterCards);
-    }
-
     public void CardUpdate()
     {
         if (index < cardsContainer.ChapterCards.Count - 1)
