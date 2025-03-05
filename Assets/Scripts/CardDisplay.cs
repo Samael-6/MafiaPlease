@@ -19,8 +19,14 @@ public class CardDisplay : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
+    }
+
+    public void BeginPlay()
+    {
         index = 0;
-        card = cardsContainer.ChapterCards[index];
+        Debug.Log("cardsContainer.Cards[index] : " + cardsContainer.Cards[index]);
+        card = cardsContainer.Cards[index];
         informations.text = card.informations;
         artwork.sprite = card.artwork;
         rightchoice.text = card.rightchoice;
@@ -29,10 +35,10 @@ public class CardDisplay : MonoBehaviour
 
     public void CardUpdate()
     {
-        if (index < cardsContainer.ChapterCards.Count - 1)
+        if (index < cardsContainer.Cards.Count - 1)
         {
             index++;
-            card = cardsContainer.ChapterCards[index];
+            card = cardsContainer.Cards[index];
             informations.text = card.informations;
             artwork.sprite = card.artwork;
             rightchoice.text = card.rightchoice;

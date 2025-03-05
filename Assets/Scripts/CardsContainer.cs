@@ -12,11 +12,14 @@ public class CardsContainer : MonoBehaviour
 
     public List<Card> Cards;
 
+    public CardDisplay cardDisplay;
+
     void Start()
     {
         Shuffle();
         AddEvent();
         i = 0;
+        cardDisplay.BeginPlay();
     }
 
     public void Shuffle () 
