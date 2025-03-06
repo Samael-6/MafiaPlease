@@ -11,17 +11,17 @@ public class ChapitreContainer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
-
-    IEnumerator LoopWithCondition()
-    {
         foreach (var cardsContainer in listCardsContainer)
         {
+            cardsContainer.gameObject.SetActive(true);
+            cardsContainer.BeginPlay();
             Debug.Log("Chapitre en cours : " + i);
+            while (cardsContainer.i <= cardsContainer.Cards.Count - 1)
+            {
 
-            // Attendre que canContinue soit true avant de poursuivre
-            yield return new WaitUntil(() => cardsContainer.i <= cardsContainer.Cards.Count - 1);
+            }
+            cardsContainer.gameObject.SetActive(false);
+            i++;
         }
     }
 }
