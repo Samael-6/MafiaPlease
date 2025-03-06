@@ -14,11 +14,12 @@ public class CardsContainer : MonoBehaviour
 
     public CardDisplay cardDisplay;
 
-    void Start()
+    public void BeginPlay()
     {
         Shuffle();
         AddEvent();
         i = 0;
+        gameObject.SetActive(true);
         cardDisplay.BeginPlay();
     }
 
@@ -39,17 +40,16 @@ public class CardsContainer : MonoBehaviour
         int c = EventCards.Count;
         int ChapterIndex = 0;
         int EventIndex = 0;
-        int CardIndex = 0;
         float AddIndex = ((100 - ((c * 100) / x)) * x) / 100;
         for (int maxi = x + c - 2; maxi >= 0; maxi--)
         {
-            if (CardIndex == 0)
+            if (i == 0)
             {
                 Cards.Add(ChapterCards[ChapterIndex]);
                 ChapterIndex++;
             }
 
-            if (CardIndex % AddIndex == 0)
+            if (i % AddIndex == 0)
             {
                 Cards.Add(EventCards[EventIndex]);
                 EventIndex++;
@@ -60,7 +60,7 @@ public class CardsContainer : MonoBehaviour
                 Cards.Add(ChapterCards[ChapterIndex]);
                 ChapterIndex++;
             }
-            CardIndex++;
+            i++;
         }
     }
 }
