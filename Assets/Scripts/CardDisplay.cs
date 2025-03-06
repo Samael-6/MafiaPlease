@@ -14,7 +14,7 @@ public class CardDisplay : MonoBehaviour
     public TMP_Text leftchoice;
 
     public Image artwork;
-    private int index;
+    public int index;
 
     public void BeginPlay()
     {

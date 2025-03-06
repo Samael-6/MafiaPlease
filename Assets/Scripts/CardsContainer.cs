@@ -19,7 +19,6 @@ public class CardsContainer : MonoBehaviour
         Shuffle();
         AddEvent();
         i = 0;
-        gameObject.SetActive(true);
         cardDisplay.BeginPlay();
     }
 
