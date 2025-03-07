@@ -14,8 +14,7 @@ public class Card : ScriptableObject
 
     public Sprite artwork;
 
-    public int police;
-    public int mafia;
+    public int corruption;
     public int famille;
     public int MentalHealth;
     public int argent;

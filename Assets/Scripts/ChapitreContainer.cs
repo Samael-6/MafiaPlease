@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class ChapitreContainer : MonoBehaviour
 {
     public List<CardsContainer> listCardsContainer;
+    public List<Card> listEnds;
     public int i = 0;
     public int max = 0;
+    
+    private int j = 0;
+    private int argent;
+    private int corruption;
+    private int famille;
+    private int mentalhealth;
 
     IEnumerator PlayChapters()
     {
@@ -31,7 +39,22 @@ public class ChapitreContainer : MonoBehaviour
         StartCoroutine(PlayChapters());
     }
 
+    public void JaugesUpdate()
+    {
+        j = listCardsContainer[i].cardDisplay.index;
+        argent = argent +   listCardsContainer[i].Cards[j].argent;
+        corruption = corruption + listCardsContainer[i].Cards[j].corruption;
+        famille = famille + listCardsContainer[i].Cards[j].famille;
+        mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].famille;
+    }
 
+    public void Ends()
+    {
+        if (argent <= 0)
+        {
+            listCardsContainer[i].gameObject.SetActive(false);
+        }
+    }
 
 
 

@@ -420,7 +420,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listCardsContainer:
   - {fileID: 403774868}
+  listEnds:
+  - {fileID: 11400000, guid: d212a22ce3f83d047a74315e24781687, type: 2}
+  - {fileID: 11400000, guid: 9f944c9acdeb4d2489c5abd14001740f, type: 2}
+  - {fileID: 11400000, guid: eb34fea0f6e2e6f4b8e78479d1b91c80, type: 2}
+  - {fileID: 11400000, guid: 63c17334c97315942bfc79d100d38581, type: 2}
+  - {fileID: 11400000, guid: d9e5fbdbda6a16647b0814fad37d28fe, type: 2}
   i: 0
+  max: 0
 --- !u!1 &1178786013
 GameObject:
   m_ObjectHideFlags: 0
