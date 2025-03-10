@@ -19,6 +19,12 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         startPosition = transform.position;
     }
 
+    void Update()
+    {
+        Debug.Log("isDragging : " + isDragging);
+        Debug.Log("stratPosition" + startPosition);
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         isDragging = true;
@@ -38,18 +44,21 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Debug.Log("Etat objet : " + enabled);
         isDragging = false;
         float swipeDistanceX = transform.position.x - startPosition.x;
 
         if (Mathf.Abs(swipeDistanceX) < swipeThreshold)
         {
             // Si le swipe est trop court, retour à la position initiale
+            Debug.Log("If : " + LeanTween.move(gameObject, startPosition, returnSpeed).setEase(LeanTweenType.easeOutQuad));
             LeanTween.move(gameObject, startPosition, returnSpeed).setEase(LeanTweenType.easeOutQuad);
         }
         else
         {
             // Si le swipe est suffisant, envoie la carte hors de l'écran et reset après
             float targetX = swipeDistanceX > 0 ? outOfScreenX : -outOfScreenX;
+            Debug.Log("Else : " + LeanTween.moveX(gameObject, targetX, 0.1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => StartCoroutine(ResetCard())));
             LeanTween.moveX(gameObject, targetX, 0.1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => StartCoroutine(ResetCard())); // Appelle la coroutine ResetCard()
         }
     }
@@ -57,9 +66,9 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     //Fonction pour reset les cartes lorsqu'elles quittent l'écran
     private IEnumerator ResetCard()
     {
+                     // Réactiver la carte (au cas où elle est désactivée)
         yield return new WaitForSeconds(0.5f);  // Attendre avant de reset
         cardDisplay.CardUpdate();
-        transform.position = startPosition;  // Remettre la carte à sa position d'origine
-        gameObject.SetActive(true);  // Réactiver la carte (au cas où elle est désactivée)
+        transform.position = startPosition;     // Remettre la carte à sa position d'origine
     }
 }

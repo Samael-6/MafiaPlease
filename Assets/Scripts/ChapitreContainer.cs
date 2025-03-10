@@ -19,14 +19,13 @@ public class ChapitreContainer : MonoBehaviour
     IEnumerator PlayChapters()
     {
         Debug.Log("LE JEU COMMENCE !!!");
-        for (i = 0; i < listCardsContainer.Count; i++)
+        for (i = 0; i <= listCardsContainer.Count-1; i++)
         {
             listCardsContainer[i].gameObject.SetActive(true);
             listCardsContainer[i].BeginPlay();
-            Debug.Log("Chapitre en cours : " + i);
 
             // Attendre que le chapitre soit terminé
-            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.index >= listCardsContainer[i].Cards.Count - 1);
+            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.index >= listCardsContainer[i].Cards.Count - 1 && listCardsContainer[i].gameObject == false);
 
             Debug.Log("Chapitre suivant !");
             listCardsContainer[i].gameObject.SetActive(false);
