@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: TutorialChoice
+  m_Name: ChoiceRandom15
   m_EditorClassIdentifier: 
-  name: Une question d'affiche
-  informations: "Le questiore Vittorio Albrizzi me demande de mettre l\u2019affiche
-    du nouveau Ministre Italien Almicare Ferroni pour repr\xE9senter sa gloire. "
-  rightchoice: Oui ! Pour notre Leader !
-  leftchoice: "Peut \xEAtre plus tard..."
+  name: Coup de pression de Lo Piccolo
+  informations: "Lo Piccolo t\u2019invite \xE0 une partie de cartes entre coll\xE8gues.
+    Une fois seuls, il te demande cash si tu as d\xE9j\xE0 re\xE7u de l\u2019argent
+    de la mafia. Il veut voir comment tu r\xE9agis.  "
+  rightchoice: "Nier cat\xE9goriquement"
+  leftchoice: Sous-entendre que "tout le monde le fait"
   artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
   Rcorruption: -1
   Rfamille: 0
-  RMentalHealth: 0
+  RMentalHealth: -1
   Rargent: 0
   Lcorruption: 1
   Lfamille: 0

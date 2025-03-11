@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: TutorialChoice
+  m_Name: ChoiceRandom9
   m_EditorClassIdentifier: 
-  name: Une question d'affiche
-  informations: "Le questiore Vittorio Albrizzi me demande de mettre l\u2019affiche
-    du nouveau Ministre Italien Almicare Ferroni pour repr\xE9senter sa gloire. "
-  rightchoice: Oui ! Pour notre Leader !
-  leftchoice: "Peut \xEAtre plus tard..."
+  name: "Visite surprise d\u2019Adriana Moretti"
+  informations: "Adriana Moretti d\xE9barque dans ton bureau avec une question inattendue
+    : elle veut savoir pourquoi certaines preuves li\xE9es \xE0 la mafia ont disparu
+    dans une affaire r\xE9cente. Elle te soup\xE7onne indirectement."
+  rightchoice: Plaider une simple erreur administrative.
+  leftchoice: Insinuer que Greco aurait pu manipuler les preuves
   artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
   Rcorruption: -1
   Rfamille: 0
-  RMentalHealth: 0
+  RMentalHealth: -1
   Rargent: 0
   Lcorruption: 1
   Lfamille: 0
-  LMentalHealth: 0
+  LMentalHealth: -1
   Largent: 0
   IsSwap: 0

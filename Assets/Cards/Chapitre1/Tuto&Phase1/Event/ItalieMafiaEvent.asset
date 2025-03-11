@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
+  m_Name: ItalieMafiaEvent
+  m_EditorClassIdentifier: 
+  name: 'Un peu de contexte '
+  informations: "Il Grande Familia est install\xE9 depuis presque un si\xE8cle en
+    Italie Moderne. Leur influence est telle que plusieurs infrastructures de l\u2019Etat
+    sont totalement sous leur influence, il se peut m\xEAme que certains de mes coll\xE8gues
+    soient aussi dans le coup mais comment le savoir? Dans tous les cas je dois faire
+    attention\u2026 Depuis l\u2019ascension de Ferroni et de son ministre Bellini,
+    la Familia est menac\xE9e et beaucoup de ses membres sont traqu\xE9s \xE0 travers
+    le pays.. "
+  rightchoice: Il faut faire attention..
+  leftchoice: Il faut faire attention..
+  artwork: {fileID: 0}
+  Rcorruption: 0
+  Rfamille: 0
+  RMentalHealth: 0
+  Rargent: 0
+  Lcorruption: 0
+  Lfamille: 0
+  LMentalHealth: 0
+  Largent: 0
+  IsSwap: 0

@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: TutorialChoice
+  m_Name: ChoiceRandom4
   m_EditorClassIdentifier: 
-  name: Une question d'affiche
-  informations: "Le questiore Vittorio Albrizzi me demande de mettre l\u2019affiche
-    du nouveau Ministre Italien Almicare Ferroni pour repr\xE9senter sa gloire. "
-  rightchoice: Oui ! Pour notre Leader !
-  leftchoice: "Peut \xEAtre plus tard..."
+  name: Demande de sabotage par Peppino
+  informations: "Moretti enqu\xEAte sur un entrep\xF4t li\xE9 \xE0 la mafia. Peppino
+    veut que tu fasses dispara\xEEtre des preuves avant qu\u2019elle arrive."
+  rightchoice: "Saboter l\u2019enqu\xEAte."
+  leftchoice: Laisser Moretti faire son boulot.
   artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
-  Rcorruption: -1
+  Rcorruption: 1
   Rfamille: 0
   RMentalHealth: 0
-  Rargent: 0
-  Lcorruption: 1
+  Rargent: 1
+  Lcorruption: -1
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0
