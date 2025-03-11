@@ -41,10 +41,10 @@ public class ChapitreContainer : MonoBehaviour
     public void JaugesUpdate()
     {
         j = listCardsContainer[i].cardDisplay.index;
-        argent = argent +   listCardsContainer[i].Cards[j].argent;
-        corruption = corruption + listCardsContainer[i].Cards[j].corruption;
-        famille = famille + listCardsContainer[i].Cards[j].famille;
-        mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].famille;
+        argent = argent +   listCardsContainer[i].Cards[j].Rargent;
+        corruption = corruption + listCardsContainer[i].Cards[j].Rcorruption;
+        famille = famille + listCardsContainer[i].Cards[j].Rfamille;
+        mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].Rfamille;
     }
 
     public void Ends()

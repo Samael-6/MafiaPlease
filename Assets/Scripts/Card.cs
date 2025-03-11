@@ -14,10 +14,15 @@ public class Card : ScriptableObject
 
     public Sprite artwork;
 
-    public int corruption;
-    public int famille;
-    public int MentalHealth;
-    public int argent;
+    public int Rcorruption;
+    public int Rfamille;
+    public int RMentalHealth;
+    public int Rargent;
+
+    public int Lcorruption;
+    public int Lfamille;
+    public int LMentalHealth;
+    public int Largent;
 
     public bool IsSwap;
     public void print()
