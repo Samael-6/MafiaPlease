@@ -19,11 +19,11 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         startPosition = transform.position;
     }
 
-    void Update()
-    {
-        Debug.Log("isDragging : " + isDragging);
-        Debug.Log("stratPosition" + startPosition);
-    }
+    //void update()
+    //{
+    //    debug.log("isdragging : " + isdragging);
+    //    debug.log("stratposition" + startposition);
+    //}
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -44,21 +44,18 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Etat objet : " + enabled);
         isDragging = false;
         float swipeDistanceX = transform.position.x - startPosition.x;
 
         if (Mathf.Abs(swipeDistanceX) < swipeThreshold)
         {
             // Si le swipe est trop court, retour à la position initiale
-            Debug.Log("If : " + LeanTween.move(gameObject, startPosition, returnSpeed).setEase(LeanTweenType.easeOutQuad));
             LeanTween.move(gameObject, startPosition, returnSpeed).setEase(LeanTweenType.easeOutQuad);
         }
         else
         {
             // Si le swipe est suffisant, envoie la carte hors de l'écran et reset après
             float targetX = swipeDistanceX > 0 ? outOfScreenX : -outOfScreenX;
-            Debug.Log("Else : " + LeanTween.moveX(gameObject, targetX, 0.1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => StartCoroutine(ResetCard())));
             LeanTween.moveX(gameObject, targetX, 0.1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => StartCoroutine(ResetCard())); // Appelle la coroutine ResetCard()
         }
     }

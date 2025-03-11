@@ -16,6 +16,7 @@ public class CardDisplay : MonoBehaviour
     public Image artwork;
     public int index;
 
+    public bool IsChapterEnd = false;
     public void BeginPlay()
     {
         index = 0;
@@ -24,8 +25,8 @@ public class CardDisplay : MonoBehaviour
 
     public void CardUpdate()
     {
-        Debug.Log("Index before update : " + index);
-        Debug.Log("``` CardUpdate : cardsContairner.Cards.Count - 1 : " + (cardsContainer.Cards.Count - 1));
+        //Debug.Log("Index before update : " + index);
+        //Debug.Log("``` CardUpdate : cardsContairner.Cards.Count - 1 : " + (cardsContainer.Cards.Count - 1));
         if (index <= cardsContainer.Cards.Count - 1)
         {
             card = cardsContainer.Cards[index];
@@ -38,7 +39,8 @@ public class CardDisplay : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            Debug.Log("Chapitre finit !!!!!!!!!");
+            IsChapterEnd = true;
+            //Debug.Log("Chapitre finit !!!!!!!!!");
         }
         index++;
     }

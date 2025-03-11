@@ -15,36 +15,57 @@ public class ChapitreContainer : MonoBehaviour
     private int corruption;
     private int famille;
     private int mentalhealth;
+    private int CardPosition;
+
+    private Vector3 uiPosition;
 
     IEnumerator PlayChapters()
     {
-        Debug.Log("LE JEU COMMENCE !!!");
+        //Debug.Log("LE JEU COMMENCE !!!");
         for (i = 0; i <= listCardsContainer.Count-1; i++)
         {
             listCardsContainer[i].gameObject.SetActive(true);
-
+            listCardsContainer[i].BeginPlay();
             // Attendre que le chapitre soit terminé
-            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.index >= listCardsContainer[i].Cards.Count - 1);
+            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd);
 
-            Debug.Log("Chapitre suivant !");
+            //Debug.Log("Chapitre suivant !");
             listCardsContainer[i].gameObject.SetActive(false);
+            
         }
-        Debug.Log("LE JEU EST FINI !!!");
+        //Debug.Log("LE JEU EST FINI !!!");
     }
 
     void Start()
     {
-        listCardsContainer[i].BeginPlay();
+        uiPosition = listCardsContainer[0].cardDisplay.artwork.transform.position;
         StartCoroutine(PlayChapters());
+    }
+
+    private void Update()
+    {
+        Debug.Log("Position de l'image UI : " + (uiPosition.x - listCardsContainer[0].cardDisplay.artwork.transform.position.x));
     }
 
     public void JaugesUpdate()
     {
-        j = listCardsContainer[i].cardDisplay.index;
-        argent = argent +   listCardsContainer[i].Cards[j].Rargent;
-        corruption = corruption + listCardsContainer[i].Cards[j].Rcorruption;
-        famille = famille + listCardsContainer[i].Cards[j].Rfamille;
-        mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].Rfamille;
+        if ((uiPosition.x - listCardsContainer[i].cardDisplay.artwork.transform.position.x) < 0)
+        {
+            j = listCardsContainer[i].cardDisplay.index;
+            argent = argent + listCardsContainer[i].Cards[j].Rargent;
+            corruption = corruption + listCardsContainer[i].Cards[j].Rcorruption;
+            famille = famille + listCardsContainer[i].Cards[j].Rfamille;
+            mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].RMentalHealth;
+        }
+
+        else
+        {
+            j = listCardsContainer[i].cardDisplay.index;
+            argent = argent + listCardsContainer[i].Cards[j].Largent;
+            corruption = corruption + listCardsContainer[i].Cards[j].Lcorruption;
+            famille = famille + listCardsContainer[i].Cards[j].Lfamille;
+            mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].LMentalHealth;
+        }
     }
 
     public void Ends()
