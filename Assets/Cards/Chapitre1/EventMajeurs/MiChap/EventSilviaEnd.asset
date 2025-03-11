@@ -10,19 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: TutorialChoice
+  m_Name: EventSilviaEnd
   m_EditorClassIdentifier: 
-  name: Une question d'affiche
-  informations: "Le questiore Vittorio Albrizzi me demande de mettre l\u2019affiche
-    du nouveau Ministre Italien Almicare Ferroni pour repr\xE9senter sa gloire. "
-  rightchoice: Oui ! Pour notre Leader !
-  leftchoice: "Peut \xEAtre plus tard..."
+  name: La descente de police I
+  informations: "Silvia Longoria, mon amie de longue date, me parle de sa prochaine
+    mission. Apparemment elle va effectuer une descente de police dans un entrep\xF4t
+    de New York Storage & Freight Co. Elle me dit \xE9galement que sa fille, de presque
+    1 an maintenant, commence \xE0 peine \xE0 marcher"
+  rightchoice: Ok...
+  leftchoice: Ok...
   artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
-  Rcorruption: -1
+  Rcorruption: 0
   Rfamille: 0
   RMentalHealth: 0
   Rargent: 0
-  Lcorruption: 1
+  Lcorruption: 0
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0

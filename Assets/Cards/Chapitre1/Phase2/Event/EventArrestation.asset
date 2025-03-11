@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
+  m_Name: EventArrestation
+  m_EditorClassIdentifier: 
+  name: " Lorenzo Greco arr\xEAt\xE9 !"
+  informations: "Lorenzo Greco, maggiore du poste de police de Palerme a \xE9t\xE9
+    arr\xEAt\xE9 hier soir par les hommes de mains de Bellini. D\u2019apr\xE8s nos
+    informations, il \xE9tait complice d\u2019une soci\xE9t\xE9 anti-gouvernement
+    de notre leader b\xE9ni. Ce criminel est maintenant sous les ge\xF4les et attend
+    la date de son ex\xE9cution. Les sources indiquent \xE9galement qu\u2019une certaine
+    Moretti, une jeune recrue ambitieuse de la police aurait aid\xE9 lors de l\u2019enqu\xEAte.  "
+  rightchoice: Oh!
+  leftchoice: Oh...
+  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  Rcorruption: 0
+  Rfamille: 0
+  RMentalHealth: 0
+  Rargent: 0
+  Lcorruption: 0
+  Lfamille: 0
+  LMentalHealth: 0
+  Largent: 0
+  IsSwap: 0
