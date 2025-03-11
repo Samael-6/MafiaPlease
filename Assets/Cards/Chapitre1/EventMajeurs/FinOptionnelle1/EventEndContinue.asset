@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
+  m_Name: EventEndContinue
+  m_EditorClassIdentifier: 
+  name: "Une int\xE9gration mortelle "
+  informations: "Greco semble m\u2019\xE9viter de plus en plus, est ce que les menace
+    on \xE9t\xE9 suffisantes ? "
+  rightchoice: Ouf..
+  leftchoice: Ouf..
+  artwork: {fileID: 0}
+  Rcorruption: 0
+  Rfamille: 0
+  RMentalHealth: 2
+  Rargent: 0
+  Lcorruption: 0
+  Lfamille: 0
+  LMentalHealth: 2
+  Largent: 0
+  IsSwap: 0

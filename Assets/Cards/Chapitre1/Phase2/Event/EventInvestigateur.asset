@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
+  m_Name: EventInvestigateur
+  m_EditorClassIdentifier: 
+  name: Antonio Ferrara
+  informations: "Buongiorno Alfio ! Vous ne connaissez pas mais je me nomme Antonio
+    Ferrara, journaliste et enqu\xEAteur ind\xE9pendant de p\xE8re en fils ! J\u2019enqu\xEAte
+    en ce moment sur les affaires de corruption de la police, et on m\u2019a signal\xE9
+    vos bonnes vertus. Si jamais vous avez des informations croustillantes, n'h\xE9sitez
+    pas \xE0 me contacter \xE0 cette adresse, voici ma carte. Et qui sait, on pourra
+    peut-\xEAtre s\u2019aider mutuellement?  "
+  rightchoice: Mouais...
+  leftchoice: On peut s'arranger...
+  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  Rcorruption: 0
+  Rfamille: 0
+  RMentalHealth: 0
+  Rargent: 0
+  Lcorruption: 0
+  Lfamille: 0
+  LMentalHealth: 0
+  Largent: 0
+  IsSwap: 0

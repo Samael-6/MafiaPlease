@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
+  m_Name: EventSaveSilvia
+  m_EditorClassIdentifier: 
+  name: "Sylvia sauv\xE9e "
+  informations: "Quelques jours sont pass\xE9s depuis l\u2019attentat ; plusieurs
+    membres de la police sont morts mais Sylvia a surv\xE9cu, apr\xE8s m\u2019avoir
+    \xE9cout\xE9. Elle est rest\xE9e plusieurs heures dans mon bureau, faisant les
+    cent pas tout en ne comprenant pas ce qui s\u2019\xE9tait pass\xE9. Apr\xE8s
+    avoir discut\xE9, elle m\u2019a racont\xE9 \xE0 quelle point elle \xE9tait heureuse
+    d\u2019\xEAtre en vie, pour sa petite fille qui n\u2019avait pas de p\xE8re.
+    Cependant, j\u2019ai cru remarquer quelque chose, elle semblait pas me croire
+    lorsque j\u2019ai \xE9voqu\xE9 que c\u2019\xE9tait une simple intuition\u2026
+    \xE0 voir ou tout \xE7a nous m\xE8ne\u2026"
+  rightchoice: Est ce que j'ai fais le bon choix?
+  leftchoice: Est ce que j'ai fais le bon choix?
+  artwork: {fileID: 0}
+  Rcorruption: 0
+  Rfamille: 0
+  RMentalHealth: 0
+  Rargent: 0
+  Lcorruption: 0
+  Lfamille: 0
+  LMentalHealth: 0
+  Largent: 0
+  IsSwap: 0
