@@ -22,10 +22,9 @@ public class ChapitreContainer : MonoBehaviour
         for (i = 0; i <= listCardsContainer.Count-1; i++)
         {
             listCardsContainer[i].gameObject.SetActive(true);
-            listCardsContainer[i].BeginPlay();
 
             // Attendre que le chapitre soit terminé
-            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.index >= listCardsContainer[i].Cards.Count - 1 && listCardsContainer[i].gameObject == false);
+            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.index >= listCardsContainer[i].Cards.Count - 1);
 
             Debug.Log("Chapitre suivant !");
             listCardsContainer[i].gameObject.SetActive(false);
@@ -35,6 +34,7 @@ public class ChapitreContainer : MonoBehaviour
 
     void Start()
     {
+        listCardsContainer[i].BeginPlay();
         StartCoroutine(PlayChapters());
     }
 

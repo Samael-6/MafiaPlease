@@ -66,7 +66,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     //Fonction pour reset les cartes lorsqu'elles quittent l'écran
     private IEnumerator ResetCard()
     {
-                     // Réactiver la carte (au cas où elle est désactivée)
+        gameObject.SetActive(true);             // Réactiver la carte (au cas où elle est désactivée)
         yield return new WaitForSeconds(0.5f);  // Attendre avant de reset
         cardDisplay.CardUpdate();
         transform.position = startPosition;     // Remettre la carte à sa position d'origine
