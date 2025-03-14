@@ -15,6 +15,7 @@ public class CardDisplay : MonoBehaviour
 
     public Image artwork;
     public int index;
+    public bool IsUpdate = false;
 
     public bool IsChapterEnd = false;
     public void BeginPlay()
@@ -34,6 +35,7 @@ public class CardDisplay : MonoBehaviour
             artwork.sprite = card.artwork;
             rightchoice.text = card.rightchoice;
             leftchoice.text = card.leftchoice;
+            IsUpdate = true;
         }
 
         else

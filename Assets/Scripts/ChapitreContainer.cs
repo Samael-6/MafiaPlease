@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using NUnit.Framework;
 using UnityEngine;
 
 public class ChapitreContainer : MonoBehaviour
 {
     public List<CardsContainer> listCardsContainer;
+    public List<Jauges> jaugesContainer;
     public List<Card> listEnds;
     public int i = 0;
     public int max = 0;
-    
+
+    private List<int> jaugesValues;
     private int j = 0;
-    private int argent;
-    private int corruption;
-    private int famille;
-    private int mentalhealth;
+    private int indexJ = 0;
+    private int argent = 0;
+    private int corruption = 0;
+    private int famille = 0;
+    private int mentalhealth = 0;
     private int CardPosition;
 
     private Vector3 uiPosition;
@@ -42,30 +46,36 @@ public class ChapitreContainer : MonoBehaviour
         StartCoroutine(PlayChapters());
     }
 
-    private void Update()
+    void Update()
     {
         Debug.Log("Position de l'image UI : " + (uiPosition.x - listCardsContainer[0].cardDisplay.artwork.transform.position.x));
+        listCardsContainer[i].cardDisplay.IsUpdate = false;
     }
+
+    //private void Update()
+    //{
+    //    
+    //}
 
     public void JaugesUpdate()
     {
         if ((uiPosition.x - listCardsContainer[i].cardDisplay.artwork.transform.position.x) < 0)
         {
-            j = listCardsContainer[i].cardDisplay.index;
-            argent = argent + listCardsContainer[i].Cards[j].Rargent;
-            corruption = corruption + listCardsContainer[i].Cards[j].Rcorruption;
-            famille = famille + listCardsContainer[i].Cards[j].Rfamille;
-            mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].RMentalHealth;
+            jaugesValues[0] = listCardsContainer[i].cardDisplay.card.Rargent;
+
         }
 
         else
         {
-            j = listCardsContainer[i].cardDisplay.index;
-            argent = argent + listCardsContainer[i].Cards[j].Largent;
-            corruption = corruption + listCardsContainer[i].Cards[j].Lcorruption;
-            famille = famille + listCardsContainer[i].Cards[j].Lfamille;
-            mentalhealth = mentalhealth + listCardsContainer[i].Cards[j].LMentalHealth;
+            
         }
+
+        foreach (var jauges in jaugesContainer)
+        {
+            Debug.Log(jauges.name + " : " + jaugesValues[jaugesContainer.IndexOf(jauges)] + " Index : " + jaugesContainer.IndexOf(jauges));
+            jauges.fillImage.fillAmount = jaugesValues[jaugesContainer.IndexOf(jauges)];
+        }
+        Debug.Log(jaugesContainer[i]);
     }
 
     public void Ends()
