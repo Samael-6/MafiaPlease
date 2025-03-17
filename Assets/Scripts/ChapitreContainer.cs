@@ -12,8 +12,8 @@ public class ChapitreContainer : MonoBehaviour
     public int i = 0;
     public int max = 0;
 
-    private List<int> jaugesValues;
-    private Vector3 uiPosition;
+    public List<float> jaugesValues;
+    public Vector3 uiPosition;
 
     IEnumerator PlayChapters()
     {
@@ -30,16 +30,31 @@ public class ChapitreContainer : MonoBehaviour
             
         }
         //Debug.Log("LE JEU EST FINI !!!");
+        //eddeazfaeedaeda
+    }
+    void OnEnable()
+    {
+        if (listCardsContainer == null)
+        {
+            Debug.Log("Réinitialisation de listCardsContainer...");
+            listCardsContainer = new List<CardsContainer>();
+        }
     }
 
     void Start()
     {
+        if (listCardsContainer == null || listCardsContainer.Count == 0)
+        {
+            Debug.LogError("listCardsContainer est NULL ou VIDE !");
+            return;
+        }
+        Debug.Log(listCardsContainer[0].cardDisplay);
         StartCoroutine(PlayChapters());
         uiPosition = listCardsContainer[0].cardDisplay.artwork.transform.position;
-        jaugesValues.Add(50);
-        jaugesValues.Add(50);
-        jaugesValues.Add(50);
-        jaugesValues.Add(50);
+        jaugesValues.Add(50f);
+        jaugesValues.Add(50f);
+        jaugesValues.Add(50f);
+        jaugesValues.Add(50f);
         Debug.Log("jaugesValues : " + jaugesValues.Count);
         Debug.Log("jaugesContainers : " + jaugesContainer.Count);
         JaugesUpdate();
@@ -78,10 +93,10 @@ public class ChapitreContainer : MonoBehaviour
             jaugesValues[3] = listCardsContainer[i].cardDisplay.card.LMentalHealth;
         }
 
-        jaugesContainer[0].fillImage.fillAmount = jaugesValues[0] / 100;
-        jaugesContainer[1].fillImage.fillAmount = jaugesValues[1] / 100;
-        jaugesContainer[2].fillImage.fillAmount = jaugesValues[2] / 100;
-        jaugesContainer[3].fillImage.fillAmount = jaugesValues[3] / 100;
+        jaugesContainer[0].fillImage.fillAmount = jaugesValues[0] / 100f;
+        jaugesContainer[1].fillImage.fillAmount = jaugesValues[1] / 100f;
+        jaugesContainer[2].fillImage.fillAmount = jaugesValues[2] / 100f;
+        jaugesContainer[3].fillImage.fillAmount = jaugesValues[3] / 100f;
         
         Debug.Log(jaugesContainer[i]);
     }

@@ -775,7 +775,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -800,7 +800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b832f6a3178c28a46aa137876a28705e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillImage: {fileID: 0}
+  fillImage: {fileID: 1087318464}
+  AmountFill: 0
 --- !u!1 &1178786013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1112,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1136,7 +1137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b832f6a3178c28a46aa137876a28705e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillImage: {fileID: 0}
+  fillImage: {fileID: 1388683987}
+  AmountFill: 0
 --- !u!1 &1606824368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1390,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1413,7 +1415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b832f6a3178c28a46aa137876a28705e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillImage: {fileID: 0}
+  fillImage: {fileID: 1921373825}
+  AmountFill: 0
 --- !u!1 &2126411294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1480,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1502,7 +1505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b832f6a3178c28a46aa137876a28705e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillImage: {fileID: 0}
+  fillImage: {fileID: 2126411297}
+  AmountFill: 0
 --- !u!1001 &3941268905943835640
 PrefabInstance:
   m_ObjectHideFlags: 0

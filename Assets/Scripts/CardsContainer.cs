@@ -5,7 +5,7 @@ public class CardsContainer : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public int i;
-    private int k;
+    public int k;
     
     public List<Card> ChapterCards;
     
