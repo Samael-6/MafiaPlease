@@ -13,14 +13,6 @@ public class ChapitreContainer : MonoBehaviour
     public int max = 0;
 
     private List<int> jaugesValues;
-    private int j = 0;
-    private int indexJ = 0;
-    private int argent = 0;
-    private int corruption = 0;
-    private int famille = 0;
-    private int mentalhealth = 0;
-    private int CardPosition;
-
     private Vector3 uiPosition;
 
     IEnumerator PlayChapters()
@@ -42,14 +34,15 @@ public class ChapitreContainer : MonoBehaviour
 
     void Start()
     {
-        uiPosition = listCardsContainer[0].cardDisplay.artwork.transform.position;
         StartCoroutine(PlayChapters());
-    }
-
-    void Update()
-    {
-        Debug.Log("Position de l'image UI : " + (uiPosition.x - listCardsContainer[0].cardDisplay.artwork.transform.position.x));
-        listCardsContainer[i].cardDisplay.IsUpdate = false;
+        uiPosition = listCardsContainer[0].cardDisplay.artwork.transform.position;
+        jaugesValues.Add(50);
+        jaugesValues.Add(50);
+        jaugesValues.Add(50);
+        jaugesValues.Add(50);
+        Debug.Log("jaugesValues : " + jaugesValues.Count);
+        Debug.Log("jaugesContainers : " + jaugesContainer.Count);
+        JaugesUpdate();
     }
 
     //private void Update()
@@ -59,30 +52,48 @@ public class ChapitreContainer : MonoBehaviour
 
     public void JaugesUpdate()
     {
-        if ((uiPosition.x - listCardsContainer[i].cardDisplay.artwork.transform.position.x) < 0)
+        Debug.Log("jaugesValues : " + jaugesValues[0]);
+        Debug.Log("jaugesValues : " + jaugesValues[1]);
+        Debug.Log("jaugesValues : " + jaugesValues[2]);
+        Debug.Log("jaugesValues : " + jaugesValues[3]);
+
+        Debug.Log("jaugesContainer : " + jaugesContainer[0].fillImage.fillAmount);
+        Debug.Log("fillAmount : " + jaugesContainer[1].fillImage.fillAmount);
+        Debug.Log("fillAmount : " + jaugesContainer[2].fillImage.fillAmount);
+        Debug.Log("fillAmount : " + jaugesContainer[3].fillImage.fillAmount);
+
+        if (0 > (uiPosition.x - listCardsContainer[i].cardDisplay.artwork.transform.position.x))
         {
             jaugesValues[0] = listCardsContainer[i].cardDisplay.card.Rargent;
-
+            jaugesValues[1] = listCardsContainer[i].cardDisplay.card.Rcorruption;
+            jaugesValues[2] = listCardsContainer[i].cardDisplay.card.Rfamille;
+            jaugesValues[3] = listCardsContainer[i].cardDisplay.card.RMentalHealth;
         }
 
-        else
+        if (0 < (uiPosition.x - listCardsContainer[i].cardDisplay.artwork.transform.position.x))
         {
-            
+            jaugesValues[0] = listCardsContainer[i].cardDisplay.card.Largent;
+            jaugesValues[1] = listCardsContainer[i].cardDisplay.card.Lcorruption;
+            jaugesValues[2] = listCardsContainer[i].cardDisplay.card.Lfamille;
+            jaugesValues[3] = listCardsContainer[i].cardDisplay.card.LMentalHealth;
         }
 
-        foreach (var jauges in jaugesContainer)
-        {
-            Debug.Log(jauges.name + " : " + jaugesValues[jaugesContainer.IndexOf(jauges)] + " Index : " + jaugesContainer.IndexOf(jauges));
-            jauges.fillImage.fillAmount = jaugesValues[jaugesContainer.IndexOf(jauges)];
-        }
+        jaugesContainer[0].fillImage.fillAmount = jaugesValues[0] / 100;
+        jaugesContainer[1].fillImage.fillAmount = jaugesValues[1] / 100;
+        jaugesContainer[2].fillImage.fillAmount = jaugesValues[2] / 100;
+        jaugesContainer[3].fillImage.fillAmount = jaugesValues[3] / 100;
+        
         Debug.Log(jaugesContainer[i]);
     }
 
     public void Ends()
     {
-        if (argent <= 0)
+        foreach (var jauge in jaugesValues)
         {
-            listCardsContainer[i].gameObject.SetActive(false);
+            if (jauge <= 0)
+            {
+                listCardsContainer[i].gameObject.SetActive(false);
+            }
         }
     }
 
