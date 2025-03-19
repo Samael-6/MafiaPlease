@@ -9,8 +9,8 @@ public class Jauges : MonoBehaviour
 
     void Start()
     {
-        fillImage.fillAmount = AmountFill;
-        Debug.Log("AmountFill : " + AmountFill);
+        //fillImage.fillAmount = AmountFill;
+        //Debug.Log("AmountFill : " + AmountFill);
     }
 
     //Met à jour la barre de progression

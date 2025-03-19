@@ -17,8 +17,12 @@ MonoBehaviour:
   rightchoice: DROIT
   leftchoice: GAUCHE
   artwork: {fileID: 21300000, guid: 038754ee6e124a744a573210c4684820, type: 3}
-  police: 0
-  mafia: 0
-  famille: 0
-  MentalHealth: 0
-  argent: 0
+  Rcorruption: 40
+  Rfamille: -10
+  RMentalHealth: -20
+  Rargent: 30
+  Lcorruption: -45
+  Lfamille: 10
+  LMentalHealth: 30
+  Largent: 0
+  IsSwap: 0

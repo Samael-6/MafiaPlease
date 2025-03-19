@@ -17,7 +17,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     void OnEnable()
     {
         LeanTween.cancel(gameObject);
-        Debug.Log(" LeanTween reset !!!");
+        //Debug.Log(" LeanTween reset !!!");
     }
 
     void Start()
@@ -53,20 +53,20 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag !!!");
+        //Debug.Log("OnEndDrag !!!");
         isDragging = false;
         float swipeDistanceX = transform.position.x - startPosition.x;
 
         if (Mathf.Abs(swipeDistanceX) < swipeThreshold)
         {
             // Si le swipe est trop court, retour à la position initiale
-            Debug.Log("Distance trop courte");
+            //Debug.Log("Distance trop courte");
             LeanTween.move(gameObject, startPosition, returnSpeed).setEase(LeanTweenType.easeOutQuad);
         }
         else
         {
             // Si le swipe est suffisant, envoie la carte hors de l'écran et reset après
-            Debug.Log("Distance suffisante");
+            //Debug.Log("Distance suffisante");
             float targetX = swipeDistanceX > 0 ? outOfScreenX : -outOfScreenX;
             LeanTween.moveX(gameObject, targetX, 0.1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => { Debug.Log("LeanTween terminé, ResetCard() appelé !"); StartCoroutine(DelayedRest()); }); // Appelle la coroutine ResetCard()
         }
@@ -76,7 +76,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     private IEnumerator ResetCard()
     {
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("ResetCard() - Objet actif ? " + gameObject.activeInHierarchy);
+        //Debug.Log("ResetCard() - Objet actif ? " + gameObject.activeInHierarchy);
 
         if (!gameObject.activeInHierarchy)
         {

@@ -434,6 +434,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d9e5fbdbda6a16647b0814fad37d28fe, type: 2}
   i: 0
   max: 0
+  jaugesValues: []
+  uiPosition: {x: 0, y: 0, z: 0}
+  uiStartPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &835203902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -802,6 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillImage: {fileID: 1087318464}
   AmountFill: 0
+  progress: 0
 --- !u!1 &1178786013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillImage: {fileID: 1388683987}
   AmountFill: 0
+  progress: 0
 --- !u!1 &1606824368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillImage: {fileID: 1921373825}
   AmountFill: 0
+  progress: 0
 --- !u!1 &2126411294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillImage: {fileID: 2126411297}
   AmountFill: 0
+  progress: 0
 --- !u!1001 &3941268905943835640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1611,6 +1618,10 @@ PrefabInstance:
       propertyPath: cardDisplay
       value: 
       objectReference: {fileID: 251472749}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: chapitreContainer
       value: 

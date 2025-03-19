@@ -17,8 +17,12 @@ MonoBehaviour:
   rightchoice: Nofun
   leftchoice: NoMonney
   artwork: {fileID: 0}
-  police: 0
-  mafia: 0
-  famille: 0
-  MentalHealth: 0
-  argent: 0
+  Rcorruption: 0
+  Rfamille: 20
+  RMentalHealth: 0
+  Rargent: -20
+  Lcorruption: 0
+  Lfamille: -20
+  LMentalHealth: 0
+  Largent: 20
+  IsSwap: 0

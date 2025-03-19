@@ -7,10 +7,9 @@ public class CardsContainer : MonoBehaviour
     public int i;
     public int k;
     
+    public ChapitreContainer chapterContainer;
     public List<Card> ChapterCards;
-    
     public List<Card> EventCards;
-
     public List<Card> Cards;
 
     public CardDisplay cardDisplay;

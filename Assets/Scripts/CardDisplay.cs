@@ -17,10 +17,16 @@ public class CardDisplay : MonoBehaviour
     public int index;
     public bool IsUpdate = false;
     public bool IsChapterEnd = false;
+    public bool choiceRight;
+    public bool neutralPosition;
+
+    public Vector3 uiPosition;
+    public Vector3 uiStartPosition;
 
     public void BeginPlay()
     {
         index = 0;
+        uiStartPosition = artwork.transform.position;
         CardUpdate();
     }
 
@@ -35,6 +41,29 @@ public class CardDisplay : MonoBehaviour
             artwork.sprite = card.artwork;
             rightchoice.text = card.rightchoice;
             leftchoice.text = card.leftchoice;
+            uiPosition = artwork.transform.position - uiStartPosition;
+            //Debug.Log("uiPosition.x : " + uiPosition.x);
+            //Debug.Log("Valeur bool condition ChoiceRight : " + (0 < uiPosition.x));
+
+            if(0 > uiPosition.x)
+            {
+                choiceRight = true;
+            }
+
+            if(0 < uiPosition.x)
+            {
+                choiceRight = false;
+            }
+
+            if (0 == uiPosition.x)
+            {
+                neutralPosition = true;
+            }
+
+            Debug.Log("choiceRight : " + choiceRight);
+            Debug.Log("neutralPosition : " + neutralPosition);
+            IsUpdate = true;
+            cardsContainer.chapterContainer.JaugesUpdate();
         }
 
         else
