@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
   m_Name: EndMentalHealth
   m_EditorClassIdentifier: 
-  name: 
+  name: MortMental
   informations: 
   rightchoice: 
   leftchoice: 
   artwork: {fileID: 0}
-  corruption: 0
-  famille: 0
-  MentalHealth: 0
-  argent: 0
+  Rcorruption: 0
+  Rfamille: 0
+  RMentalHealth: 0
+  Rargent: 0
+  Lcorruption: 0
+  Lfamille: 0
+  LMentalHealth: 0
+  Largent: 0
   IsSwap: 0

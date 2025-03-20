@@ -422,16 +422,16 @@ MonoBehaviour:
   listCardsContainer:
   - {fileID: 403774868}
   jaugesContainer:
-  - {fileID: 1388683989}
   - {fileID: 1921373827}
   - {fileID: 1087318466}
   - {fileID: 2126411299}
+  - {fileID: 1388683989}
   listEnds:
-  - {fileID: 11400000, guid: d212a22ce3f83d047a74315e24781687, type: 2}
-  - {fileID: 11400000, guid: 9f944c9acdeb4d2489c5abd14001740f, type: 2}
-  - {fileID: 11400000, guid: eb34fea0f6e2e6f4b8e78479d1b91c80, type: 2}
   - {fileID: 11400000, guid: 63c17334c97315942bfc79d100d38581, type: 2}
+  - {fileID: 11400000, guid: eb34fea0f6e2e6f4b8e78479d1b91c80, type: 2}
+  - {fileID: 11400000, guid: 9f944c9acdeb4d2489c5abd14001740f, type: 2}
   - {fileID: 11400000, guid: d9e5fbdbda6a16647b0814fad37d28fe, type: 2}
+  - {fileID: 11400000, guid: d212a22ce3f83d047a74315e24781687, type: 2}
   i: 0
   max: 0
   jaugesValues: []
@@ -1326,10 +1326,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 769966005}
-  - {fileID: 846364312}
   - {fileID: 1606824369}
   - {fileID: 1823001680}
   - {fileID: 1062986127}
+  - {fileID: 846364312}
   m_Father: {fileID: 723605716}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1921373822

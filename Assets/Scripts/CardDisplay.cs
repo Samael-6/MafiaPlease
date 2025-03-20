@@ -32,6 +32,8 @@ public class CardDisplay : MonoBehaviour
 
     public void CardUpdate()
     {
+        IsUpdate = true;
+        cardsContainer.chapterContainer.JaugesUpdate();
         //Debug.Log("Index before update : " + index);
         //Debug.Log("``` CardUpdate : cardsContairner.Cards.Count - 1 : " + (cardsContainer.Cards.Count - 1));
         if (index <= cardsContainer.Cards.Count - 1)
@@ -44,26 +46,6 @@ public class CardDisplay : MonoBehaviour
             uiPosition = artwork.transform.position - uiStartPosition;
             //Debug.Log("uiPosition.x : " + uiPosition.x);
             //Debug.Log("Valeur bool condition ChoiceRight : " + (0 < uiPosition.x));
-
-            if(0 > uiPosition.x)
-            {
-                choiceRight = true;
-            }
-
-            if(0 < uiPosition.x)
-            {
-                choiceRight = false;
-            }
-
-            if (0 == uiPosition.x)
-            {
-                neutralPosition = true;
-            }
-
-            Debug.Log("choiceRight : " + choiceRight);
-            Debug.Log("neutralPosition : " + neutralPosition);
-            IsUpdate = true;
-            cardsContainer.chapterContainer.JaugesUpdate();
         }
 
         else
@@ -72,6 +54,7 @@ public class CardDisplay : MonoBehaviour
             IsChapterEnd = true;
             //Debug.Log("Chapitre finit !!!!!!!!!");
         }
+
         index++;
     }
 }

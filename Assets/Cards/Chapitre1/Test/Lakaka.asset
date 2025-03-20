@@ -19,10 +19,10 @@ MonoBehaviour:
   artwork: {fileID: 0}
   Rcorruption: 0
   Rfamille: 0
-  RMentalHealth: 40
-  Rargent: 20
-  Lcorruption: -10
-  Lfamille: 40
+  RMentalHealth: 4
+  Rargent: 2
+  Lcorruption: -1
+  Lfamille: 4
   LMentalHealth: 0
-  Largent: 30
+  Largent: 3
   IsSwap: 0

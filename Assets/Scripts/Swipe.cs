@@ -68,6 +68,8 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
             // Si le swipe est suffisant, envoie la carte hors de l'écran et reset après
             //Debug.Log("Distance suffisante");
             float targetX = swipeDistanceX > 0 ? outOfScreenX : -outOfScreenX;
+            cardDisplay.choiceRight = 0 < swipeDistanceX;
+            cardDisplay.neutralPosition = 0 == swipeDistanceX;
             LeanTween.moveX(gameObject, targetX, 0.1f).setEase(LeanTweenType.easeInQuad).setOnComplete(() => { Debug.Log("LeanTween terminé, ResetCard() appelé !"); StartCoroutine(DelayedRest()); }); // Appelle la coroutine ResetCard()
         }
     }

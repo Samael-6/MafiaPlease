@@ -17,6 +17,7 @@ public class ChapitreContainer : MonoBehaviour
     public Vector3 uiPosition;
     public Vector3 uiStartPosition;
 
+    private bool IsDead = false;
     IEnumerator PlayChapters()
     {
         //Debug.Log("LE JEU COMMENCE !!!");
@@ -42,7 +43,7 @@ public class ChapitreContainer : MonoBehaviour
             listCardsContainer = new List<CardsContainer>();
         }
     }
-
+    //dddddd
     void Start()
     {
         if (listCardsContainer == null || listCardsContainer.Count == 0)
@@ -50,12 +51,11 @@ public class ChapitreContainer : MonoBehaviour
             //Debug.LogError("listCardsContainer est NULL ou VIDE !");
             return;
         }
-        Debug.Log(listCardsContainer[0].cardDisplay);
         uiStartPosition = listCardsContainer[0].cardDisplay.artwork.transform.position;
-        jaugesValues.Add(50f);
-        jaugesValues.Add(50f);
-        jaugesValues.Add(50f);
-        jaugesValues.Add(50f);
+        jaugesValues.Add(5f);
+        jaugesValues.Add(5f);
+        jaugesValues.Add(5f);
+        jaugesValues.Add(5f);
         StartCoroutine(PlayChapters());
         //Debug.Log("jaugesValues : " + jaugesValues.Count);
         //Debug.Log("jaugesContainers : " + jaugesContainer.Count);
@@ -87,43 +87,96 @@ public class ChapitreContainer : MonoBehaviour
 
     public void JaugesUpdate()
     {
-        //Debug.Log("jaugesValues : " + jaugesValues[0]);
-        //Debug.Log("jaugesValues : " + jaugesValues[1]);
-        //Debug.Log("jaugesValues : " + jaugesValues[2]);
-        //Debug.Log("jaugesValues : " + jaugesValues[3]);
+        //if (listCardsContainer[i].cardDisplay.card == listEnds[0] || listCardsContainer[i].cardDisplay.card == listEnds[1] ||
+        //    listCardsContainer[i].cardDisplay.card == listEnds[2] || listCardsContainer[i].cardDisplay.card == listEnds[3] ||
+        //    listCardsContainer[i].cardDisplay.card == listEnds[4])
+        //{
+        //    IsDead = true;
+        //}
+
 
         if (listCardsContainer[i].cardDisplay.choiceRight && !listCardsContainer[i].cardDisplay.neutralPosition)
         {
-            Debug.Log("DROITE !!!!");
-            jaugesValues[0] = jaugesValues[0] + listCardsContainer[i].cardDisplay.card.Rargent;
-            jaugesValues[1] = jaugesValues[1] + listCardsContainer[i].cardDisplay.card.Rcorruption;
-            jaugesValues[2] = jaugesValues[2] + listCardsContainer[i].cardDisplay.card.Rfamille;
-            jaugesValues[3] = jaugesValues[3] + listCardsContainer[i].cardDisplay.card.RMentalHealth;
+            jaugesValues[0] = jaugesValues[0] + listCardsContainer[i].cardDisplay.card.Rcorruption;
+            jaugesValues[1] = jaugesValues[1] + listCardsContainer[i].cardDisplay.card.Rfamille;
+            jaugesValues[2] = jaugesValues[2] + listCardsContainer[i].cardDisplay.card.RMentalHealth;
+            jaugesValues[3] = jaugesValues[3] + listCardsContainer[i].cardDisplay.card.Rargent;
         }
 
         if (!listCardsContainer[i].cardDisplay.choiceRight && !listCardsContainer[i].cardDisplay.neutralPosition)
         {
-            Debug.Log("GAUCHE !!!!");
-            jaugesValues[0] = jaugesValues[0] + listCardsContainer[i].cardDisplay.card.Largent;
-            jaugesValues[1] = jaugesValues[1] + listCardsContainer[i].cardDisplay.card.Lcorruption;
-            jaugesValues[2] = jaugesValues[2] + listCardsContainer[i].cardDisplay.card.Lfamille;
-            jaugesValues[3] = jaugesValues[3] + listCardsContainer[i].cardDisplay.card.LMentalHealth;
+            jaugesValues[0] = jaugesValues[0] + listCardsContainer[i].cardDisplay.card.Lcorruption;
+            jaugesValues[1] = jaugesValues[1] + listCardsContainer[i].cardDisplay.card.Lfamille;
+            jaugesValues[2] = jaugesValues[2] + listCardsContainer[i].cardDisplay.card.LMentalHealth;
+            jaugesValues[3] = jaugesValues[3] + listCardsContainer[i].cardDisplay.card.Largent;
         }
 
-        jaugesContainer[0].fillImage.fillAmount = jaugesValues[0] / 100f;
-        jaugesContainer[1].fillImage.fillAmount = jaugesValues[1] / 100f;
-        jaugesContainer[2].fillImage.fillAmount = jaugesValues[2] / 100f;
-        jaugesContainer[3].fillImage.fillAmount = jaugesValues[3] / 100f;
-        Debug.Log("C'est UPDATE !!!!!!!!!!!!!!!!!!!!!");
+        jaugesContainer[0].fillImage.fillAmount = jaugesValues[0] / 10f;
+        jaugesContainer[1].fillImage.fillAmount = jaugesValues[1] / 10f;
+        jaugesContainer[2].fillImage.fillAmount = jaugesValues[2] / 10f;
+        jaugesContainer[3].fillImage.fillAmount = jaugesValues[3] / 10f;
+
+        //Debug.Log("Corruption :" + jaugesValues[0]);
+        //Debug.Log("Famille : " + jaugesValues[1]);
+        //Debug.Log("MentalHealth : " + jaugesValues[2]);
+        //Debug.Log("Argent : " + jaugesValues[3]);
+        //Debug.Log("Argent : " + jaugesValues[3]);
+
+        Ends();
     }
 
     public void Ends()
     {
-        foreach (var jauge in jaugesValues)
+        if (IsDead)
         {
-            if (jauge <= 0)
+            listCardsContainer[i].gameObject.SetActive(false);
+        }
+
+        for (int z = 0; z <= jaugesValues.Count - 1; z++)
+        {
+            if (jaugesValues[z] <= 0 || (jaugesValues[z] >= 10 && z == 0))
             {
-                listCardsContainer[i].gameObject.SetActive(false);
+                Debug.Log(" ---  Z  --- " + z);
+                Debug.Log("jaugesValues[z] : " + jaugesValues[z]);
+                if (z == 0 && jaugesValues[z] <= 0)
+                {
+                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[0];
+                    Debug.Log("Corruption 0");
+                    IsDead = true;
+                    break;
+                }
+
+                if (z == 0 && jaugesValues[z] >= 1)
+                {
+                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[1];
+                    Debug.Log("Corruption 1");
+                    IsDead = true;
+                    break;
+                }
+
+                if (z == 1)
+                {
+                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[2];
+                    Debug.Log("Famille");
+                    IsDead = true;
+                    break;
+                }
+
+                if (z == 2)
+                {
+                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[3];
+                    Debug.Log("MentalHealth");
+                    IsDead = true;
+                    break;
+                }
+
+                if (z == 3)
+                {
+                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[4];
+                    Debug.Log("Argent");
+                    IsDead = true;
+                    break;
+                }
             }
         }
     }

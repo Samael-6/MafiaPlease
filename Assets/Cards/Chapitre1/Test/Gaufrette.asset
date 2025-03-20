@@ -18,11 +18,11 @@ MonoBehaviour:
   leftchoice: NoMonney
   artwork: {fileID: 0}
   Rcorruption: 0
-  Rfamille: 20
+  Rfamille: 2
   RMentalHealth: 0
-  Rargent: -20
+  Rargent: -2
   Lcorruption: 0
-  Lfamille: -20
+  Lfamille: -2
   LMentalHealth: 0
-  Largent: 20
+  Largent: 2
   IsSwap: 0

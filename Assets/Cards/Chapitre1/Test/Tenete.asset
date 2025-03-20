@@ -17,12 +17,12 @@ MonoBehaviour:
   rightchoice: Poulice
   leftchoice: Guerre
   artwork: {fileID: -1116563563, guid: 128b4041537c7e441924466ce9c090f5, type: 3}
-  Rcorruption: -40
+  Rcorruption: -4
   Rfamille: 0
-  RMentalHealth: 30
-  Rargent: -10
-  Lcorruption: 20
+  RMentalHealth: 3
+  Rargent: -1
+  Lcorruption: 2
   Lfamille: 0
-  LMentalHealth: -20
-  Largent: 30
+  LMentalHealth: -2
+  Largent: 3
   IsSwap: 0
