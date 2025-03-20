@@ -27,4 +27,10 @@ public class Jauges : MonoBehaviour
             fillImage.fillAmount = progress;
         }
     }
+
+    public void DisableJauges()
+    {
+        gameObject.SetActive(false);
+        transform.parent.gameObject.SetActive(false);
+    }
 }

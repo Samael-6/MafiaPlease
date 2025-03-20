@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Importer SceneManager
 
 public class ChapitreContainer : MonoBehaviour
 {
     public List<CardsContainer> listCardsContainer;
+    public QuitGame mainMenu;
     public List<Jauges> jaugesContainer;
     public List<Card> listEnds;
     public int i = 0;
@@ -18,22 +20,23 @@ public class ChapitreContainer : MonoBehaviour
     public Vector3 uiStartPosition;
 
     private bool IsDead = false;
+    private bool IsEnd = false;
     IEnumerator PlayChapters()
     {
         //Debug.Log("LE JEU COMMENCE !!!");
-        for (i = 0; i <= listCardsContainer.Count-1; i++)
+        for (i = 0; i <= listCardsContainer.Count - 1; i++)
         {
             listCardsContainer[i].gameObject.SetActive(true);
             listCardsContainer[i].BeginPlay();
             // Attendre que le chapitre soit terminé
             yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd && listCardsContainer[i].cardDisplay.IsUpdate == false);
 
-            //Debug.Log("Chapitre suivant !");
+            Debug.Log("Chapitre suivant !");
             listCardsContainer[i].gameObject.SetActive(false);
-            
         }
-        //Debug.Log("LE JEU EST FINI !!!");
-        //eddeazfaeedaeda
+        IsEnd = true;
+        Ends();
+        Debug.Log("LE JEU EST FINI !!!");
     }
     void OnEnable()
     {
@@ -87,14 +90,6 @@ public class ChapitreContainer : MonoBehaviour
 
     public void JaugesUpdate()
     {
-        //if (listCardsContainer[i].cardDisplay.card == listEnds[0] || listCardsContainer[i].cardDisplay.card == listEnds[1] ||
-        //    listCardsContainer[i].cardDisplay.card == listEnds[2] || listCardsContainer[i].cardDisplay.card == listEnds[3] ||
-        //    listCardsContainer[i].cardDisplay.card == listEnds[4])
-        //{
-        //    IsDead = true;
-        //}
-
-
         if (listCardsContainer[i].cardDisplay.choiceRight && !listCardsContainer[i].cardDisplay.neutralPosition)
         {
             jaugesValues[0] = jaugesValues[0] + listCardsContainer[i].cardDisplay.card.Rcorruption;
@@ -127,55 +122,65 @@ public class ChapitreContainer : MonoBehaviour
 
     public void Ends()
     {
-        if (IsDead)
+        Debug.Log("!__ END __!");
+        if (IsDead || IsEnd)
         {
+            foreach (var jauge in jaugesContainer)
+            {
+                jauge.DisableJauges();
+            }
             listCardsContainer[i].gameObject.SetActive(false);
+            Debug.Log(mainMenu == null);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        for (int z = 0; z <= jaugesValues.Count - 1; z++)
+        if (!IsDead)
         {
-            if (jaugesValues[z] <= 0 || (jaugesValues[z] >= 10 && z == 0))
+            for (int z = 0; z <= jaugesValues.Count - 1; z++)
             {
-                Debug.Log(" ---  Z  --- " + z);
-                Debug.Log("jaugesValues[z] : " + jaugesValues[z]);
-                if (z == 0 && jaugesValues[z] <= 0)
+                if (jaugesValues[z] <= 0 || (jaugesValues[z] >= 10 && z == 0))
                 {
-                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[0];
-                    Debug.Log("Corruption 0");
-                    IsDead = true;
-                    break;
-                }
+                    Debug.Log(" ---  Z  --- " + z);
+                    Debug.Log("jaugesValues[z] : " + jaugesValues[z]);
+                    if (z == 0 && jaugesValues[z] <= 0)
+                    {
+                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[0];
+                        Debug.Log("Corruption 0");
+                        IsDead = true;
+                        break;
+                    }
 
-                if (z == 0 && jaugesValues[z] >= 1)
-                {
-                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[1];
-                    Debug.Log("Corruption 1");
-                    IsDead = true;
-                    break;
-                }
+                    if (z == 0 && jaugesValues[z] >= 1)
+                    {
+                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[1];
+                        Debug.Log("Corruption 1");
+                        IsDead = true;
+                        break;
+                    }
 
-                if (z == 1)
-                {
-                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[2];
-                    Debug.Log("Famille");
-                    IsDead = true;
-                    break;
-                }
+                    if (z == 1)
+                    {
+                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[2];
+                        Debug.Log("Famille");
+                        IsDead = true;
+                        break;
+                    }
 
-                if (z == 2)
-                {
-                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[3];
-                    Debug.Log("MentalHealth");
-                    IsDead = true;
-                    break;
-                }
+                    if (z == 2)
+                    {
+                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[3];
+                        Debug.Log("MentalHealth");
+                        IsDead = true;
+                        break;
+                    }
 
-                if (z == 3)
-                {
-                    listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[4];
-                    Debug.Log("Argent");
-                    IsDead = true;
-                    break;
+                    if (z == 3)
+                    {
+                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[4];
+                        Debug.Log("Argent");
+                        IsDead = true;
+                        break;
+                    }
                 }
             }
         }
