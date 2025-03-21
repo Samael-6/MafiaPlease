@@ -21,22 +21,45 @@ public class ChapitreContainer : MonoBehaviour
 
     private bool IsDead = false;
     private bool IsEnd = false;
+    //IEnumerator PlayChapters()
+    //{
+    //    //Debug.Log("LE JEU COMMENCE !!!");
+    //    for (i = 0; i <= listCardsContainer.Count - 1; i++)
+    //    {
+    //        listCardsContainer[i].gameObject.SetActive(true);
+    //        listCardsContainer[i].BeginPlay();
+    //        // Attendre que le chapitre soit terminé
+    //        Debug.Log("Condition pour passer au prochain chapitre : " + (listCardsContainer[i].cardDisplay.IsChapterEnd && listCardsContainer[i].cardDisplay.IsUpdate == false));
+    //        yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd && listCardsContainer[i].cardDisplay.IsUpdate == false);
+
+    //        Debug.Log("Chapitre suivant !");
+    //        listCardsContainer[i].gameObject.SetActive(false);
+    //    }
+    //    Debug.Log("IsEnd BEFORE : " + IsEnd);
+    //    IsEnd = true;
+    //    Debug.Log("IsEnd AFTER : " + IsEnd);
+    //    Ends();
+    //    Debug.Log("LE JEU EST FINI !!!");
+    //}
+
     IEnumerator PlayChapters()
     {
-        //Debug.Log("LE JEU COMMENCE !!!");
-        for (i = 0; i <= listCardsContainer.Count - 1; i++)
+        for (i = 0; i < listCardsContainer.Count; i++) // Utilise `< listCardsContainer.Count` au lieu de `<=`
         {
             listCardsContainer[i].gameObject.SetActive(true);
             listCardsContainer[i].BeginPlay();
-            // Attendre que le chapitre soit terminé
-            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd && listCardsContainer[i].cardDisplay.IsUpdate == false);
 
-            Debug.Log("Chapitre suivant !");
+            if (listCardsContainer[i].cardDisplay.IsChapterEnd && !listCardsContainer[i].cardDisplay.IsUpdate)
+            {
+                listCardsContainer[i].gameObject.SetActive(false);
+                Debug.Log("Tous les chapitres sont terminés ! ");
+                IsEnd = true;
+                Ends();
+            }
+            // Attendre que le chapitre soit terminé
+            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd && !listCardsContainer[i].cardDisplay.IsUpdate);
             listCardsContainer[i].gameObject.SetActive(false);
         }
-        IsEnd = true;
-        Ends();
-        Debug.Log("LE JEU EST FINI !!!");
     }
     void OnEnable()
     {
@@ -46,7 +69,7 @@ public class ChapitreContainer : MonoBehaviour
             listCardsContainer = new List<CardsContainer>();
         }
     }
-    //dddddd
+    
     void Start()
     {
         if (listCardsContainer == null || listCardsContainer.Count == 0)
@@ -110,77 +133,97 @@ public class ChapitreContainer : MonoBehaviour
         jaugesContainer[1].fillImage.fillAmount = jaugesValues[1] / 10f;
         jaugesContainer[2].fillImage.fillAmount = jaugesValues[2] / 10f;
         jaugesContainer[3].fillImage.fillAmount = jaugesValues[3] / 10f;
-
-        //Debug.Log("Corruption :" + jaugesValues[0]);
-        //Debug.Log("Famille : " + jaugesValues[1]);
-        //Debug.Log("MentalHealth : " + jaugesValues[2]);
-        //Debug.Log("Argent : " + jaugesValues[3]);
-        //Debug.Log("Argent : " + jaugesValues[3]);
-
         Ends();
     }
 
     public void Ends()
     {
         Debug.Log("!__ END __!");
+        Debug.Log("IsDead || IsEnd : " + (IsDead || IsEnd));
         if (IsDead || IsEnd)
         {
             foreach (var jauge in jaugesContainer)
             {
                 jauge.DisableJauges();
             }
-            listCardsContainer[i].gameObject.SetActive(false);
+
+            if (i < listCardsContainer.Count)
+            {
+                listCardsContainer[i].gameObject.SetActive(false);
+            }
+
             Debug.Log(mainMenu == null);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            return;
         }
 
         if (!IsDead)
         {
-            for (int z = 0; z <= jaugesValues.Count - 1; z++)
+            for (int z = 0; z < jaugesValues.Count; z++)
             {
                 if (jaugesValues[z] <= 0 || (jaugesValues[z] >= 10 && z == 0))
                 {
                     Debug.Log(" ---  Z  --- " + z);
                     Debug.Log("jaugesValues[z] : " + jaugesValues[z]);
+
+                    // Vérifier que 'i' est bien dans la limite de listCardsContainer
+                    if (i >= listCardsContainer.Count)
+                    {
+                        //Debug.LogError("Index 'i' hors limite de listCardsContainer !");
+                        return;
+                    }
+
+                    // Vérifier que listCardsContainer[i] et ses cartes ne sont pas null
+                    if (listCardsContainer[i] == null || listCardsContainer[i].Cards == null)
+                    {
+                        //Debug.LogError("listCardsContainer[i] ou sa liste Cards est null !");
+                        return;
+                    }
+
+                    // Vérifier que la liste des cartes n'est pas vide
+                    if (listCardsContainer[i].Cards.Count == 0)
+                    {
+                        //Debug.LogWarning("Aucune carte dans listCardsContainer[i].Cards ! Ajout direct de la carte de mort.");
+                        listCardsContainer[i].Cards.Add(listEnds[z]);  // Ajout direct de la carte de mort correspondante
+                    }
+
+                    // Vérifier et ajuster l'index cardDisplay.index
+                    int index = listCardsContainer[i].cardDisplay.index;
+                    if (index < 0 || index >= listCardsContainer[i].Cards.Count)
+                    {
+                        //Debug.LogWarning("Index cardDisplay.index invalide. Réglage sur la dernière carte disponible.");
+                        index = listCardsContainer[i].Cards.Count - 1;
+                    }
+
+                    // Appliquer la bonne carte de mort selon le type de jauge
                     if (z == 0 && jaugesValues[z] <= 0)
                     {
-                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[0];
+                        listCardsContainer[i].Cards.Add(listEnds[0]);
                         Debug.Log("Corruption 0");
-                        IsDead = true;
-                        break;
                     }
-
-                    if (z == 0 && jaugesValues[z] >= 1)
+                    else if (z == 0 && jaugesValues[z] >= 10)
                     {
-                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[1];
+                        listCardsContainer[i].Cards.Add(listEnds[1]);
                         Debug.Log("Corruption 1");
-                        IsDead = true;
-                        break;
                     }
-
-                    if (z == 1)
+                    else if (z == 1)
                     {
-                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[2];
+                        listCardsContainer[i].Cards.Add(listEnds[2]);
                         Debug.Log("Famille");
-                        IsDead = true;
-                        break;
                     }
-
-                    if (z == 2)
+                    else if (z == 2)
                     {
-                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[3];
+                        listCardsContainer[i].Cards.Add(listEnds[3]);
                         Debug.Log("MentalHealth");
-                        IsDead = true;
-                        break;
+                    }
+                    else if (z == 3)
+                    {
+                        listCardsContainer[i].Cards.Add(listEnds[4]);
+                        Debug.Log("Argent");
                     }
 
-                    if (z == 3)
-                    {
-                        listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index] = listEnds[4];
-                        Debug.Log("Argent");
-                        IsDead = true;
-                        break;
-                    }
+                    IsDead = true;
+                    break;
                 }
             }
         }
