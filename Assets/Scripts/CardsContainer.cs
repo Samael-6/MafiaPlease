@@ -44,7 +44,6 @@ public class CardsContainer : MonoBehaviour
         {
             if (EventCards.Count > 0)
             {
-                Debug.Log(EventCards.Count);
                 int x = ChapterCards.Count;
                 int c = EventCards.Count;
                 int ChapterIndex = 0;
@@ -52,6 +51,9 @@ public class CardsContainer : MonoBehaviour
                 float AddIndex = ((100 - ((c * 100) / x)) * x) / 100;
                 for (int maxi = x + c - 2; maxi >= 0; maxi--)
                 {
+                    Debug.Log("c / Event Cards : " + c);
+                    Debug.Log("X / ChapterCards.count : " + x);
+                    Debug.Log("Maxi : " + maxi);
                     if (i == 0)
                     {
                         Cards.Add(ChapterCards[ChapterIndex]);
@@ -66,9 +68,17 @@ public class CardsContainer : MonoBehaviour
 
                     else
                     {
-                        Debug.Log("ChapterIndex : "+ ChapterIndex);
-                        Cards.Add(ChapterCards[ChapterIndex]);
-                        ChapterIndex++;
+                        if (ChapterIndex < ChapterCards.Count)
+                        {
+                            //Debug.Log("ChapterIndex : "+ ChapterIndex);
+                            Cards.Add(ChapterCards[ChapterIndex]);
+                            ChapterIndex++;
+                        }
+
+                        else
+                        {
+                            Debug.LogError("Chapter Index et trop grand : " +  ChapterIndex);
+                        }
                     }
                     i++;
                 }

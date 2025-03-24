@@ -59,6 +59,7 @@ public class ChapitreContainer : MonoBehaviour
             }
             // Attendre que le chapitre soit terminé
             yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd && listCardsContainer[i].cardDisplay.IsUpdate);
+            listCardsContainer[i].cardDisplay.IsChapterEnd = false;
             listCardsContainer[i].gameObject.SetActive(false);
         }
     }

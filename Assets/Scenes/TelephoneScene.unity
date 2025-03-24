@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChapitreIntro
       objectReference: {fileID: 0}
+    - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: cardDisplay
       value: 
@@ -2148,12 +2152,16 @@ PrefabInstance:
       objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: ChapterCards.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'EventCards.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d0f0a4385fbed34aa070ae497ff13a2, type: 2}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: 'ChapterCards.Array.data[0]'
       value: 
@@ -3282,7 +3290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1847093378
 Transform:
   m_ObjectHideFlags: 0

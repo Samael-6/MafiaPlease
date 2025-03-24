@@ -78,7 +78,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     private IEnumerator ResetCard()
     {
         yield return new WaitForSeconds(0.5f);
-        //Debug.Log("ResetCard() - Objet actif ? " + gameObject.activeInHierarchy);
+        //Debug.Log("ResetCard() - Objet actif ? " + gameObject.activeInHierarchy);fffgdfgfg
 
         if (!gameObject.activeInHierarchy)
         {
