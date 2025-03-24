@@ -36,6 +36,7 @@ public class CardDisplay : MonoBehaviour
         cardsContainer.chapterContainer.JaugesUpdate();
         //Debug.Log("Index before update : " + index);
         //Debug.Log("``` CardUpdate : cardsContairner.Cards.Count - 1 : " + (cardsContainer.Cards.Count - 1));
+        //TKT C pour le fonctionnement;
         if (index <= cardsContainer.Cards.Count - 1)
         {
             card = cardsContainer.Cards[index];

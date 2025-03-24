@@ -207,10 +207,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardsContainer
+      value: 
+      objectReference: {fileID: 1865478069}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_Name
       value: ChapitreIntro
       objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 985100049}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
       value: 2
@@ -233,6 +245,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1096091136114358249, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
   m_PrefabInstance: {fileID: 61819856}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &181409073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1083306517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81fbed4c051f124ba1c9409cd9a9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &251472749 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
@@ -515,10 +538,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardsContainer
+      value: 
+      objectReference: {fileID: 945162327}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_Name
       value: Chapitre1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 932970885}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
       value: 3
@@ -882,7 +921,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listCardsContainer:
+  - {fileID: 1865478069}
+  - {fileID: 1083306519}
   - {fileID: 403774868}
+  - {fileID: 1991834592}
+  - {fileID: 872977502}
+  - {fileID: 945162327}
+  - {fileID: 1711651710}
+  - {fileID: 1857195109}
   mainMenu: {fileID: 507963636}
   jaugesContainer:
   - {fileID: 1921373827}
@@ -993,7 +1039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &831868986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,10 +1644,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardsContainer
+      value: 
+      objectReference: {fileID: 872977502}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_Name
       value: ChapitreSilvaChoice
       objectReference: {fileID: 0}
+    - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 1039859381}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: ChapterCards.Array.size
       value: 1
@@ -1620,6 +1682,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1096091136114358249, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
   m_PrefabInstance: {fileID: 872977500}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &872977502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 872977500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af305b2425181fc468ec5a92e17dae4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &932970885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 624723851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81fbed4c051f124ba1c9409cd9a9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &945162327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 624723851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af305b2425181fc468ec5a92e17dae4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &985100049 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 61819856}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81fbed4c051f124ba1c9409cd9a9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1001394809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,6 +1801,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001394809}
   m_CullTransparentMesh: 1
+--- !u!114 &1039859381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 872977500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81fbed4c051f124ba1c9409cd9a9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1042869052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1857195107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81fbed4c051f124ba1c9409cd9a9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1048915158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,10 +2126,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardsContainer
+      value: 
+      objectReference: {fileID: 1083306519}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_Name
       value: ChapitreIntroTutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 181409073}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
       value: 0
@@ -2024,6 +2168,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1096091136114358249, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
   m_PrefabInstance: {fileID: 1083306517}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1083306519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1083306517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af305b2425181fc468ec5a92e17dae4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087318462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,10 +2687,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardsContainer
+      value: 
+      objectReference: {fileID: 1991834592}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_Name
       value: ChapitreSilviaDeath
       objectReference: {fileID: 0}
+    - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 1706526634}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
       value: 1
@@ -2797,6 +2968,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606824368}
   m_CullTransparentMesh: 1
+--- !u!114 &1706526634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1310971690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81fbed4c051f124ba1c9409cd9a9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1711651708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2885,10 +3067,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardsContainer
+      value: 
+      objectReference: {fileID: 1711651710}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_Name
       value: ChapitreHistoireEndFils
       objectReference: {fileID: 0}
+    - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 2065939788}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
       value: 1
@@ -2907,6 +3105,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1096091136114358249, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
   m_PrefabInstance: {fileID: 1711651708}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1711651710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1711651708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af305b2425181fc468ec5a92e17dae4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815772844
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,7 +3282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1847093378
 Transform:
   m_ObjectHideFlags: 0
@@ -3182,10 +3391,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardsContainer
+      value: 
+      objectReference: {fileID: 1857195109}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_Name
       value: ChapitreChoiceFilsEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: cardDisplay
+      value: 
+      objectReference: {fileID: 1042869052}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: chapterContainer
+      value: 
+      objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: ChapterCards.Array.size
       value: 1
@@ -3204,6 +3429,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1096091136114358249, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
   m_PrefabInstance: {fileID: 1857195107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1857195109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1857195107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af305b2425181fc468ec5a92e17dae4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1865478069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 61819856}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af305b2425181fc468ec5a92e17dae4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1921373822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,6 +3542,28 @@ MonoBehaviour:
   fillImage: {fileID: 1921373825}
   AmountFill: 0
   progress: 0
+--- !u!114 &1991834592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1310971690}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af305b2425181fc468ec5a92e17dae4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2065939788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3979993564424436846, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+  m_PrefabInstance: {fileID: 1711651708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81fbed4c051f124ba1c9409cd9a9f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2126411294
 GameObject:
   m_ObjectHideFlags: 0
@@ -3484,7 +3753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5099404676826825872, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: cardDisplay

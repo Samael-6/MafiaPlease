@@ -35,31 +35,43 @@ public class CardsContainer : MonoBehaviour
 
     public void AddEvent()
     {
-        int x = ChapterCards.Count;
-        int c = EventCards.Count;
-        int ChapterIndex = 0;
-        int EventIndex = 0;
-        float AddIndex = ((100 - ((c * 100) / x)) * x) / 100;
-        for (int maxi = x + c - 2; maxi >= 0; maxi--)
+        if (ChapterCards.Count <= 0)
         {
-            if (i == 0)
-            {
-                Cards.Add(ChapterCards[ChapterIndex]);
-                ChapterIndex++;
-            }
+            Cards = EventCards;
+        }
 
-            if (i % AddIndex == 0)
+        if (ChapterCards.Count > 0)
+        {
+            if (EventCards.Count > 0)
             {
-                Cards.Add(EventCards[EventIndex]);
-                EventIndex++;
-            }
+                Debug.Log(EventCards.Count);
+                int x = ChapterCards.Count;
+                int c = EventCards.Count;
+                int ChapterIndex = 0;
+                int EventIndex = 0;
+                float AddIndex = ((100 - ((c * 100) / x)) * x) / 100;
+                for (int maxi = x + c - 2; maxi >= 0; maxi--)
+                {
+                    if (i == 0)
+                    {
+                        Cards.Add(ChapterCards[ChapterIndex]);
+                        ChapterIndex++;
+                    }
 
-            else
-            {
-                Cards.Add(ChapterCards[ChapterIndex]);
-                ChapterIndex++;
+                    if (i % AddIndex == 0)
+                    {
+                        Cards.Add(EventCards[EventIndex]);
+                        EventIndex++;
+                    }
+
+                    else
+                    {
+                        Cards.Add(ChapterCards[ChapterIndex]);
+                        ChapterIndex++;
+                    }
+                    i++;
+                }
             }
-            i++;
         }
     }
 }

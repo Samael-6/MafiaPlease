@@ -48,6 +48,7 @@ public class ChapitreContainer : MonoBehaviour
         {
             listCardsContainer[i].gameObject.SetActive(true);
             listCardsContainer[i].BeginPlay();
+            Debug.Log("Nom du chap en cours : " + listCardsContainer[i].name);
 
             if (listCardsContainer[i].cardDisplay.IsChapterEnd && !listCardsContainer[i].cardDisplay.IsUpdate)
             {
