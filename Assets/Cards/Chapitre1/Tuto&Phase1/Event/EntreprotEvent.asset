@@ -19,7 +19,7 @@ MonoBehaviour:
     soient pr\xE9sents, tout en ne grillant pas ma couverture.  "
   rightchoice: "Int\xE9ressant..."
   leftchoice: Mince...
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: d2faee9a1657df648ba71dcff69a242f, type: 3}
   Rcorruption: 0
   Rfamille: 0
   RMentalHealth: 0

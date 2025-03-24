@@ -17,7 +17,7 @@ MonoBehaviour:
     veut en profiter pour orchestrer un attentat et t\u2019implique."
   rightchoice: "Aider la mafia (faciliter l\u2019attentat)."
   leftchoice: "S\xE9curiser l\u2019\xE9v\xE9nement (prot\xE9ger le dignitaire)."
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: aa1c8819c06cd224aa8994b511d81fd6, type: 3}
   Rcorruption: 2
   Rfamille: 0
   RMentalHealth: -2

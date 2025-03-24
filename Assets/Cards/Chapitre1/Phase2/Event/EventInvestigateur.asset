@@ -21,7 +21,7 @@ MonoBehaviour:
     peut-\xEAtre s\u2019aider mutuellement?  "
   rightchoice: Mouais...
   leftchoice: On peut s'arranger...
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: 31d212c9203f0e647bddc0d9f0b1b62f, type: 3}
   Rcorruption: 0
   Rfamille: 0
   RMentalHealth: 0

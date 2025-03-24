@@ -20,7 +20,7 @@ MonoBehaviour:
     tous les soirs et de re-partager des moments de famille avec lui et Grazia.   "
   rightchoice: 'Ouf ! '
   leftchoice: Tant mieux !
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: b8ddc502b1cb3b042912aabf80412d8c, type: 3}
   Rcorruption: 0
   Rfamille: 0
   RMentalHealth: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
     fais remonter, c\u2019est la guerre interne assur\xE9e.  "
   rightchoice: "Ignorer le rapport et le d\xE9truire"
   leftchoice: "Le transmettre \xE0 la hi\xE9rarchie imm\xE9diatement"
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: c71cc19e069c43644a3a69d226b547a9, type: 3}
   Rcorruption: 1
   Rfamille: 0
   RMentalHealth: 0

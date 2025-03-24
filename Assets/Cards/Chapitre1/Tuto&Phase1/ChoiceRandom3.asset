@@ -17,7 +17,7 @@ MonoBehaviour:
     traquer la corruption. Tes archives personnelles contiennent des preuves de pots-de-vin."
   rightchoice: Cacher les archives.
   leftchoice: 'Laisser fouiller '
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: cd205d81bca23304e9e62e6aafc4320b, type: 3}
   Rcorruption: 1
   Rfamille: 0
   RMentalHealth: -1

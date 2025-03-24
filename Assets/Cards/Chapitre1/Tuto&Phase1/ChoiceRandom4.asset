@@ -17,7 +17,7 @@ MonoBehaviour:
     veut que tu fasses dispara\xEEtre des preuves avant qu\u2019elle arrive."
   rightchoice: "Saboter l\u2019enqu\xEAte."
   leftchoice: Laisser Moretti faire son boulot.
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: aa1c8819c06cd224aa8994b511d81fd6, type: 3}
   Rcorruption: 1
   Rfamille: 0
   RMentalHealth: 0

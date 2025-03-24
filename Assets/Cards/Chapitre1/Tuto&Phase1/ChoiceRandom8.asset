@@ -19,7 +19,7 @@ MonoBehaviour:
     de leur fournir une liste de policiers sympathisants fascistes.  "
   rightchoice: "Accepter, en \xE9change d\u2019une somme"
   leftchoice: Refuser
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: e9b70c5c275367941870d1406bff0a33, type: 3}
   Rcorruption: 1
   Rfamille: 0
   RMentalHealth: 0

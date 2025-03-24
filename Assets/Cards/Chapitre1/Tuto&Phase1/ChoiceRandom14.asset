@@ -18,7 +18,7 @@ MonoBehaviour:
     eu lieu. Il te demande si tu en sais quelque chose."
   rightchoice: 'Mentir '
   leftchoice: "Lui dire qu\u2019il doit arr\xEAter de poser trop de questions."
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: eeb7440db85c4f24696ab0336d1437d0, type: 3}
   Rcorruption: 0
   Rfamille: 0
   RMentalHealth: -1

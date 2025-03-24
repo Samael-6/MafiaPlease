@@ -18,7 +18,7 @@ MonoBehaviour:
     \xE9change d\u2019une petite somme."
   rightchoice: Collaborer avec lui
   leftchoice: "Refuser et en parler \xE0 Moretti"
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: 1b7e9e042cd86414786254940e485e78, type: 3}
   Rcorruption: 1
   Rfamille: 0
   RMentalHealth: 0

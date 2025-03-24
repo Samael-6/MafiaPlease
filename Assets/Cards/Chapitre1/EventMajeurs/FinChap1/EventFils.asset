@@ -18,7 +18,7 @@ MonoBehaviour:
     lui m\xEAme il est fort, je crois en lui. "
   leftchoice: 'Nous acceptons, il faut tenter le tout pour le tout pour sauver la
     prunelle de nos yeux. Una vita, un destino. '
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: b8ddc502b1cb3b042912aabf80412d8c, type: 3}
   Rcorruption: 0
   Rfamille: 0
   RMentalHealth: -2

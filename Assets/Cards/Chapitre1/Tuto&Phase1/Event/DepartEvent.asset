@@ -19,7 +19,7 @@ MonoBehaviour:
     tout en gardant en t\xEAte les objectifs de mes nouveaux \u201Camis\u201D...  "
   rightchoice: Voyons...
   leftchoice: Voyons...
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: 9d27bf7cdddec014d8f7e496429213bf, type: 3}
   Rcorruption: 0
   Rfamille: 0
   RMentalHealth: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
   rightchoice: 'Accepter et le diriger vers le dossier de Lo Piccolo pour gagner
     son info. '
   leftchoice: 'Refuser et tenter de le faire taire via des pressions judiciaires. '
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 31d212c9203f0e647bddc0d9f0b1b62f, type: 3}
   Rcorruption: -1
   Rfamille: 0
   RMentalHealth: 0

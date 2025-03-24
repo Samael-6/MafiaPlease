@@ -19,7 +19,7 @@ MonoBehaviour:
     1 an maintenant, commence \xE0 peine \xE0 marcher"
   rightchoice: Ok...
   leftchoice: Ok...
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: c9bdb41b91dd7674998c03d452d36629, type: 3}
   Rcorruption: 0
   Rfamille: 0
   RMentalHealth: 0

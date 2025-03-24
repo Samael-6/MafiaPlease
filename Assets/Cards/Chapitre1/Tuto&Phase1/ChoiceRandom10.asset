@@ -18,7 +18,7 @@ MonoBehaviour:
     \"discuter de l\u2019avenir\"."
   rightchoice: Accepter le RDV
   leftchoice: "Ignorer la lettre et signaler la tentative de contact \xE0 Albrizzi"
-  artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
+  artwork: {fileID: 21300000, guid: 25b15a8b1a5c7a14094df669fe2522ae, type: 3}
   Rcorruption: 1
   Rfamille: 0
   RMentalHealth: 0

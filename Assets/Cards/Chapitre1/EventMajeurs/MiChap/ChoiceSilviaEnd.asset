@@ -17,7 +17,7 @@ MonoBehaviour:
   rightchoice: "La pr\xE9venir du danger en disant que d'apr\xE8s nos informations
     de sup\xE9rieur, qu'il s'agirait probablement d'un pi\xE8ge"
   leftchoice: "Ne pas la pr\xE9venir, avec un peu de chance, il n'y aura pas de pi\xE8ges..."
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: 577b860222573db42912845ea56d97b1, type: 3}
   Rcorruption: 2
   Rfamille: 0
   RMentalHealth: 1
