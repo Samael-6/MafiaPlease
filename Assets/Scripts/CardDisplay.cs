@@ -53,7 +53,8 @@ public class CardDisplay : MonoBehaviour
         {
             gameObject.SetActive(false);
             IsChapterEnd = true;
-            //Debug.Log("Chapitre finit !!!!!!!!!");
+            IsUpdate = true;
+            Debug.Log("Chapitre finit !!!!!!!!!");
         }
 
         index++;

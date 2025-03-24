@@ -66,6 +66,7 @@ public class CardsContainer : MonoBehaviour
 
                     else
                     {
+                        Debug.Log("ChapterIndex : "+ ChapterIndex);
                         Cards.Add(ChapterCards[ChapterIndex]);
                         ChapterIndex++;
                     }

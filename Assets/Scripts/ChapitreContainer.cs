@@ -58,7 +58,7 @@ public class ChapitreContainer : MonoBehaviour
                 Ends();
             }
             // Attendre que le chapitre soit terminé
-            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd && !listCardsContainer[i].cardDisplay.IsUpdate);
+            yield return new WaitUntil(() => listCardsContainer[i].cardDisplay.IsChapterEnd && listCardsContainer[i].cardDisplay.IsUpdate);
             listCardsContainer[i].gameObject.SetActive(false);
         }
     }
@@ -70,7 +70,12 @@ public class ChapitreContainer : MonoBehaviour
             listCardsContainer = new List<CardsContainer>();
         }
     }
-    
+
+    private void Update()
+    {
+        Debug.Log("Index I : " + i);
+    }
+
     void Start()
     {
         if (listCardsContainer == null || listCardsContainer.Count == 0)
@@ -139,7 +144,6 @@ public class ChapitreContainer : MonoBehaviour
 
     public void Ends()
     {
-        Debug.Log("!__ END __!");
         Debug.Log("IsDead || IsEnd : " + (IsDead || IsEnd));
         if (IsDead || IsEnd)
         {
