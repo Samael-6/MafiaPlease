@@ -207,25 +207,36 @@ public class ChapitreContainer : MonoBehaviour
                         listCardsContainer[i].Cards.Add(listEnds[0]);
                         Debug.Log("Corruption 0");
                     }
+
                     else if (z == 0 && jaugesValues[z] >= 10)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[1]);
                         Debug.Log("Corruption 1");
                     }
+
                     else if (z == 1)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[2]);
                         Debug.Log("Famille");
                     }
+
                     else if (z == 2)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[3]);
                         Debug.Log("MentalHealth");
                     }
+
                     else if (z == 3)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[4]);
                         Debug.Log("Argent");
+                    }
+
+                    if (listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index + 1] != null)
+                    {
+                        (listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index], listCardsContainer[i].Cards[listCardsContainer[i].Cards.Count - 1]) =
+                            (listCardsContainer[i].Cards[listCardsContainer[i].Cards.Count - 1], listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index]);
+                        Debug.Log("Mise en place de la carte mort !");
                     }
 
                     IsDead = true;

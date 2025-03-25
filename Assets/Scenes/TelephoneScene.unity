@@ -229,11 +229,11 @@ PrefabInstance:
       objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: ChapterCards.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: 'EventCards.Array.data[0]'
@@ -243,6 +243,10 @@ PrefabInstance:
       propertyPath: 'EventCards.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 93d0ab40446c62e45ac33caaaf34fe50, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'EventCards.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d0f0a4385fbed34aa070ae497ff13a2, type: 2}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: 'ChapterCards.Array.data[0]'
       value: 
@@ -928,13 +932,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listCardsContainer:
   - {fileID: 1865478069}
-  - {fileID: 0}
   - {fileID: 403774868}
   - {fileID: 1991834592}
-  - {fileID: 0}
   - {fileID: 945162327}
   - {fileID: 1711651710}
-  - {fileID: 0}
   mainMenu: {fileID: 507963636}
   jaugesContainer:
   - {fileID: 1921373827}
@@ -942,8 +943,8 @@ MonoBehaviour:
   - {fileID: 2126411299}
   - {fileID: 1388683989}
   listEnds:
-  - {fileID: 11400000, guid: 63c17334c97315942bfc79d100d38581, type: 2}
   - {fileID: 11400000, guid: eb34fea0f6e2e6f4b8e78479d1b91c80, type: 2}
+  - {fileID: 11400000, guid: 63c17334c97315942bfc79d100d38581, type: 2}
   - {fileID: 11400000, guid: 9f944c9acdeb4d2489c5abd14001740f, type: 2}
   - {fileID: 11400000, guid: d9e5fbdbda6a16647b0814fad37d28fe, type: 2}
   - {fileID: 11400000, guid: d212a22ce3f83d047a74315e24781687, type: 2}
@@ -2415,16 +2416,20 @@ PrefabInstance:
       objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: ChapterCards.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: 'EventCards.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 7ecf1d64965e231409fe3e0351fcb9f1, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'EventCards.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 093d7626fd7612445bbf0a868f7fe818, type: 2}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: 'ChapterCards.Array.data[0]'
       value: 
@@ -2807,7 +2812,7 @@ PrefabInstance:
       objectReference: {fileID: 769966006}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: EventCards.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: ChapterCards.Array.size
@@ -2817,6 +2822,10 @@ PrefabInstance:
       propertyPath: 'EventCards.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: db26bf29c518b3d4c942a1e781d79000, type: 2}
+    - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
+      propertyPath: 'EventCards.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9662c951eb1cb7745bff4baf1853f58a, type: 2}
     - target: {fileID: 6514203563793909880, guid: d69b9638369d1da4e9fb76f8b81d8439, type: 3}
       propertyPath: 'ChapterCards.Array.data[0]'
       value: 

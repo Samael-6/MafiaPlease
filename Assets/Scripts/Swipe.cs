@@ -28,11 +28,6 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         }
     }
 
-    //void update()
-    //{
-    //    debug.log("isdragging : " + isdragging);
-    //    debug.log("stratposition" + startposition);
-    //}
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -78,7 +73,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
     private IEnumerator ResetCard()
     {
         yield return new WaitForSeconds(0.5f);
-        //Debug.Log("ResetCard() - Objet actif ? " + gameObject.activeInHierarchy);fffgdfgfg
+        //Debug.Log("ResetCard() - Objet actif ? " + gameObject.activeInHierarchy);
 
         if (!gameObject.activeInHierarchy)
         {
