@@ -4,7 +4,7 @@ using UnityEngine;
 public class SoundManagement : MonoBehaviour
 {
 
-    public List<AudioSource> SonsJeu;
+    public List<AudioClip> SonsJeu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

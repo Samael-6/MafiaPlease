@@ -3094,7 +3094,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0666e9aa5a906294caaf888f30b2ac20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SonsJeu: []
+  SonsJeu:
+  - {fileID: 8300000, guid: a62529603697fb542aa4e00b581ec212, type: 3}
+  - {fileID: 8300000, guid: 18b81b7a1b5fda24a883f03cce5c4a40, type: 3}
+  - {fileID: 8300000, guid: eedc32200839c8342a757ed419d43faf, type: 3}
+  - {fileID: 8300000, guid: bba5c5ebd3264f04890c7da080b69792, type: 3}
 --- !u!4 &1762488538
 Transform:
   m_ObjectHideFlags: 0
