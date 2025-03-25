@@ -20,11 +20,11 @@ MonoBehaviour:
   rightchoice: "Accepter la prime discr\xE8te"
   leftchoice: "Refuser et continuer \xE0 bosser honn\xEAtement"
   artwork: {fileID: 21300000, guid: 1b7e9e042cd86414786254940e485e78, type: 3}
-  Rcorruption: 1
+  Rcorruption: -1
   Rfamille: 0
   RMentalHealth: 0
   Rargent: 1
-  Lcorruption: -1
+  Lcorruption: 1
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0

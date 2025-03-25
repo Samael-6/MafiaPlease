@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: ChoiceRandom28
+  m_Name: ChoiceRandom41
   m_EditorClassIdentifier: 
-  name: Lettre de ton fils
-  informations: "Un coll\xE8gue te donne une lettre de ton fils, avec un dessin :
-    toi en uniforme avec \xE9crit \"Mon papa c\u2019est le plus fort\"."
-  rightchoice: "Accrocher le dessin \xE0 ton bureau"
-  leftchoice: "Le ranger discr\xE8tement dans un tiroir"
-  artwork: {fileID: 21300000, guid: eeb7440db85c4f24696ab0336d1437d0, type: 3}
+  name: 'Cadeau inattendu '
+  informations: "Votre femme vous a achet\xE9 un petit cadeau pour vous encourager
+    dans votre travail."
+  rightchoice: Lui offrir quelque chose en retour
+  leftchoice: Juste la remercier rapidement
+  artwork: {fileID: 21300000, guid: 272814438e077574e9970b55845f47d8, type: 3}
   Rcorruption: 0
   Rfamille: 1
-  RMentalHealth: 1
-  Rargent: 0
+  RMentalHealth: 0
+  Rargent: -1
   Lcorruption: 0
   Lfamille: -1
-  LMentalHealth: -1
+  LMentalHealth: 0
   Largent: 0
   IsSwap: 0

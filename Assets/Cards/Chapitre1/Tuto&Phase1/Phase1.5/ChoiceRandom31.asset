@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: ChoiceRandom3
+  m_Name: ChoiceRandom31
   m_EditorClassIdentifier: 
-  name: Perquisition surprise par la milice fasciste
-  informations: "Ordre direct de Rome : fouille compl\xE8te du commissariat pour
-    traquer la corruption. Tes archives personnelles contiennent des preuves de pots-de-vin."
-  rightchoice: Cacher les archives.
-  leftchoice: 'Laisser fouiller '
+  name: "Le gouverneur Bellini exige des r\xE9sultats"
+  informations: "Le gouverneur passe un message clair via le Questore Albrizzi :
+    il faut des arrestations spectaculaires pour prouver l\u2019efficacit\xE9 du
+    r\xE9gime contre la mafia, quitte \xE0 forcer un peu la main sur certaines preuves.  "
+  rightchoice: Organiser une rafle rapide
+  leftchoice: "Refuser de b\xE2cler les enqu\xEAtes. "
   artwork: {fileID: 21300000, guid: cd205d81bca23304e9e62e6aafc4320b, type: 3}
   Rcorruption: -1
   Rfamille: 0
-  RMentalHealth: -1
+  RMentalHealth: 1
   Rargent: 0
-  Lcorruption: 2
+  Lcorruption: 1
   Lfamille: 0
-  LMentalHealth: 0
-  Largent: -1
+  LMentalHealth: 1
+  Largent: 0
   IsSwap: 0

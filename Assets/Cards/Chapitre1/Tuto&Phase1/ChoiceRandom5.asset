@@ -18,11 +18,11 @@ MonoBehaviour:
   rightchoice: "Aider la mafia (faciliter l\u2019attentat)."
   leftchoice: "S\xE9curiser l\u2019\xE9v\xE9nement (prot\xE9ger le dignitaire)."
   artwork: {fileID: 21300000, guid: aa1c8819c06cd224aa8994b511d81fd6, type: 3}
-  Rcorruption: 2
+  Rcorruption: -2
   Rfamille: 0
   RMentalHealth: -2
   Rargent: 1
-  Lcorruption: -1
+  Lcorruption: 1
   Lfamille: 0
   LMentalHealth: 1
   Largent: 0

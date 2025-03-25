@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: ChoiceRandom28
+  m_Name: ChoiceRandom32
   m_EditorClassIdentifier: 
-  name: Lettre de ton fils
-  informations: "Un coll\xE8gue te donne une lettre de ton fils, avec un dessin :
-    toi en uniforme avec \xE9crit \"Mon papa c\u2019est le plus fort\"."
-  rightchoice: "Accrocher le dessin \xE0 ton bureau"
-  leftchoice: "Le ranger discr\xE8tement dans un tiroir"
-  artwork: {fileID: 21300000, guid: eeb7440db85c4f24696ab0336d1437d0, type: 3}
+  name: Discussion tendue avec ta femme
+  informations: "Ta femme apprend que tu rentres de plus en plus tard. Elle s\u2019inqui\xE8te,
+    parle de d\xE9m\xE9nager avec le petit pour s\u2019\xE9loigner \"de cette ambiance
+    pourrie\".  "
+  rightchoice: "Lui promettre d\u2019\xEAtre plus pr\xE9sent. "
+  leftchoice: ' Lui dire que ton boulot passe avant tout. '
+  artwork: {fileID: 21300000, guid: 272814438e077574e9970b55845f47d8, type: 3}
   Rcorruption: 0
   Rfamille: 1
   RMentalHealth: 1

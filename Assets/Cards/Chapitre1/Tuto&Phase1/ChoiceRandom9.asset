@@ -19,11 +19,11 @@ MonoBehaviour:
   rightchoice: Plaider une simple erreur administrative.
   leftchoice: Insinuer que Greco aurait pu manipuler les preuves
   artwork: {fileID: 21300000, guid: 1e4798d912ae71d42b0c1f547a5ed175, type: 3}
-  Rcorruption: -1
+  Rcorruption: 1
   Rfamille: 0
   RMentalHealth: -1
   Rargent: 0
-  Lcorruption: 1
+  Lcorruption: -1
   Lfamille: 0
   LMentalHealth: -1
   Largent: 0

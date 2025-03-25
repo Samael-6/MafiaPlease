@@ -19,11 +19,11 @@ MonoBehaviour:
   rightchoice: "Nier cat\xE9goriquement"
   leftchoice: Sous-entendre que "tout le monde le fait"
   artwork: {fileID: 21300000, guid: 0a702dde984fe884e8c2680a94695490, type: 3}
-  Rcorruption: -1
+  Rcorruption: 1
   Rfamille: 0
   RMentalHealth: -1
   Rargent: 0
-  Lcorruption: 1
+  Lcorruption: -1
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0
