@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EndFamille
   m_EditorClassIdentifier: 
   name: MortFamille
-  informations: 
-  rightchoice: 
-  leftchoice: 
+  informations: REVIENS PITIE REVIENS
+  rightchoice: C'est fini.
+  leftchoice: C'est fini.
   artwork: {fileID: 21300000, guid: 1fcd0915c87c56c429ea5477977ff496, type: 3}
   Rcorruption: 0
   Rfamille: 0
@@ -25,4 +25,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0

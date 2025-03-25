@@ -21,9 +21,10 @@ MonoBehaviour:
   Rcorruption: 0
   Rfamille: 2
   RMentalHealth: 1
-  Rargent: -1
+  Rargent: -2
   Lcorruption: 0
   Lfamille: -2
   LMentalHealth: -1
   Largent: 1
+  son: {fileID: 0}
   IsSwap: 0

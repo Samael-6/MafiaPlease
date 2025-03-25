@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EndArgent
   m_EditorClassIdentifier: 
   name: MortArgent
-  informations: 
-  rightchoice: 
-  leftchoice: 
+  informations: "Non, je suis \xE0 nouveau \xE0 sec... Vite le Casino..."
+  rightchoice: C'est fini.
+  leftchoice: C'est fini.
   artwork: {fileID: 21300000, guid: 1b7e9e042cd86414786254940e485e78, type: 3}
   Rcorruption: 0
   Rfamille: 0
@@ -25,4 +25,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0

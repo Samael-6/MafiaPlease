@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Benvenuto Alfio !
   informations: "Congratulazioni Alfio. Maintenant que tu es \xE0 ce poste, tu dois
-    encore plus respecter ton devoir de justicier pour notre glorieuse patrie. Pour
-    \xEAtre tout \xE0 fait franc avec toi je ne sais pas comment quelqu\u2019un comme
-    toi \xE0 pu acc\xE9der \xE0 ce poste aussi facilement, mais bon, c\u2019est les
-    d\xE9cisions du dessus. Sinon j\u2019ai un portrait \xE0 te donner d\u2019Almicare
-    Ferroni, installe le cela fait partie de tes devoirs vertueux.  "
+    respecter ton devoir de justicier pour notre glorieuse patrie. Pour \xEAtre tout
+    \xE0 fait franc avec toi je ne sais pas comment quelqu\u2019un comme toi \xE0
+    pu acc\xE9der \xE0 ce poste aussi facilement, mais bon, c\u2019est les d\xE9cisions
+    du dessus. Sinon j\u2019ai un portrait \xE0 te donner d\u2019Almicare Ferroni,
+    installe le cela fait partie de tes devoirs vertueux.  "
   rightchoice: ...
   leftchoice: ...
   artwork: {fileID: 21300000, guid: c71cc19e069c43644a3a69d226b547a9, type: 3}
@@ -30,4 +30,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0
