@@ -18,12 +18,13 @@ MonoBehaviour:
   rightchoice: "Faciliter l\u2019\xE9vasion"
   leftchoice: Refuser
   artwork: {fileID: 21300000, guid: d99cd4a14a79d644f805e9d052e1070e, type: 3}
-  Rcorruption: -1
+  Rcorruption: -2
   Rfamille: 0
   RMentalHealth: 0
   Rargent: 1
-  Lcorruption: 1
+  Lcorruption: 2
   Lfamille: 0
-  LMentalHealth: 1
+  LMentalHealth: 2
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0

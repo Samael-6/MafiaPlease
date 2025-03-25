@@ -16,7 +16,7 @@ MonoBehaviour:
   informations: "Un livre qui n'\xE9tait pas sur l'\xE9tag\xE8re est pr\xE9sent cette
     fois ci, l'enlever pourrait cramer ma couverture."
   rightchoice: Tant pis, personne ne doit savoir
-  leftchoice: "J'attends un peu et je l'enl\xE8ve en faisant la poussi\xE8re"
+  leftchoice: "Enlever en faisant la poussi\xE8re"
   artwork: {fileID: 21300000, guid: 272814438e077574e9970b55845f47d8, type: 3}
   Rcorruption: 1
   Rfamille: 0
@@ -26,4 +26,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: -1
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0

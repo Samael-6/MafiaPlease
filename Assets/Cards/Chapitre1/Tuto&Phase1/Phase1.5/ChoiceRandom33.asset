@@ -16,7 +16,7 @@ MonoBehaviour:
   informations: "Une note manuscrite appara\xEEt sur ton bureau : \"Cargaison d\u2019armes
     ce soir, entrep\xF4t 14. \xC7a vient de chez Mancuso.\""
   rightchoice: "Pr\xE9venir la brigade et organiser une perquisition. "
-  leftchoice: "Faire dispara\xEEtre la note et pr\xE9venir Peppino Conti "
+  leftchoice: "Faire dispara\xEEtre la note et pr\xE9venir Peppino  "
   artwork: {fileID: 21300000, guid: aa1c8819c06cd224aa8994b511d81fd6, type: 3}
   Rcorruption: 1
   Rfamille: 0
@@ -26,4 +26,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: 0
   Largent: 1
+  son: {fileID: 0}
   IsSwap: 0

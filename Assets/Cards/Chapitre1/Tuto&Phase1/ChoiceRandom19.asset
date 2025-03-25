@@ -17,7 +17,7 @@ MonoBehaviour:
     traitement pour votre fils, plus efficace mais hors de prix. Votre femme te demande
     si tu peux payer."
   rightchoice: "Accepter et payer imm\xE9diatement"
-  leftchoice: "Refuser et dire qu\u2019on doit se contenter du traitement de base"
+  leftchoice: Se contenter du traitement de base
   artwork: {fileID: 21300000, guid: b8ddc502b1cb3b042912aabf80412d8c, type: 3}
   Rcorruption: 0
   Rfamille: 2
@@ -27,4 +27,5 @@ MonoBehaviour:
   Lfamille: -2
   LMentalHealth: -1
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
     te voir au premier rang. Mais ce soir-l\xE0, une r\xE9union interne importante
     est pr\xE9vue au commissariat.  "
   rightchoice: 'Poser une absence et aller le voir. '
-  leftchoice: 'Rester bosser et lui promettre une surprise plus tard. '
+  leftchoice: 'Lui promettre une surprise plus tard. '
   artwork: {fileID: 21300000, guid: 272814438e077574e9970b55845f47d8, type: 3}
   Rcorruption: 0
   Rfamille: 1
@@ -27,4 +27,5 @@ MonoBehaviour:
   Lfamille: -1
   LMentalHealth: -1
   Largent: 1
+  son: {fileID: 0}
   IsSwap: 0
