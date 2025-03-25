@@ -236,7 +236,7 @@ public class ChapitreContainer : MonoBehaviour
                     {
                         (listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index], listCardsContainer[i].Cards[listCardsContainer[i].Cards.Count - 1]) =
                             (listCardsContainer[i].Cards[listCardsContainer[i].Cards.Count - 1], listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index]);
-                        Debug.Log("Mise en place de la carte mort !");
+                        //Debug.Log("Mise en place de la carte mort !");
                     }
 
                     IsDead = true;
