@@ -18,11 +18,11 @@ MonoBehaviour:
   rightchoice: "Saboter l\u2019enqu\xEAte."
   leftchoice: Laisser Moretti faire son boulot.
   artwork: {fileID: 21300000, guid: aa1c8819c06cd224aa8994b511d81fd6, type: 3}
-  Rcorruption: 1
+  Rcorruption: -1
   Rfamille: 0
   RMentalHealth: 0
   Rargent: 1
-  Lcorruption: -1
+  Lcorruption: 1
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0

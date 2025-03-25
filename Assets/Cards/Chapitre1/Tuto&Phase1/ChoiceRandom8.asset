@@ -20,11 +20,11 @@ MonoBehaviour:
   rightchoice: "Accepter, en \xE9change d\u2019une somme"
   leftchoice: Refuser
   artwork: {fileID: 21300000, guid: e9b70c5c275367941870d1406bff0a33, type: 3}
-  Rcorruption: 1
+  Rcorruption: -1
   Rfamille: 0
   RMentalHealth: 0
   Rargent: 1
-  Lcorruption: -2
+  Lcorruption: 2
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0

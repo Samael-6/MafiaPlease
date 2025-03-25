@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: ChoiceRandom21
+  m_Name: ChoiceRandom35
   m_EditorClassIdentifier: 
-  name: "Lettre de l\u2019\xE9cole"
-  informations: "Tu re\xE7ois une lettre de l\u2019\xE9cole : ils veulent te voir
-    en urgence car ton fils montre des signes de grande anxi\xE9t\xE9. Ta femme ne
-    peut pas y aller seule."
-  rightchoice: "Prendre une heure sur ton service pour t\u2019y rendre"
-  leftchoice: "Envoyer un mot d\u2019excuse et rester bosser"
+  name: Une lettre de menace vise ta famille
+  informations: "Tu re\xE7ois une lettre sans signature : \"Reste bien sage, ou ta
+    femme et ton fils en paieront le prix.\""
+  rightchoice: "Transf\xE9rer la lettre \xE0 la hi\xE9rarchie et ouvrir une enqu\xEAte. "
+  leftchoice: "Br\xFBler la lettre et ne rien dire. "
   artwork: {fileID: 21300000, guid: 9d27bf7cdddec014d8f7e496429213bf, type: 3}
-  Rcorruption: 0
+  Rcorruption: 1
   Rfamille: 1
-  RMentalHealth: 1
-  Rargent: -1
-  Lcorruption: 0
+  RMentalHealth: -1
+  Rargent: 0
+  Lcorruption: -1
   Lfamille: -1
-  LMentalHealth: -1
-  Largent: 1
+  LMentalHealth: 1
+  Largent: 0
   IsSwap: 0

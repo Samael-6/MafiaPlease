@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6972bd6e7ee954944b1891f561c3e9af, type: 3}
-  m_Name: ChoiceRandom24
+  m_Name: ChoiceRandom39
   m_EditorClassIdentifier: 
-  name: Cadeau suspect
-  informations: "Un colis t\u2019attend \xE0 l\u2019accueil du commissariat. \xC0
-    l\u2019int\xE9rieur, une montre de luxe et un mot : \"Pour votre d\xE9vouement.\"
-    Tu sais tr\xE8s bien d\u2019o\xF9 \xE7a vient.  "
-  rightchoice: Garder la montre
-  leftchoice: Jeter la montre
+  name: 'L''anniversaire de votre fils '
+  informations: "Votre femme rappelle que l\u2019anniversaire de votre fils approche
+    et qu\u2019il voudrait que vous soyez pr\xE9sent."
+  rightchoice: "Prendre cong\xE9 pour \xEAtre l\xE0"
+  leftchoice: 'Ne pas y aller, une affaire urgente '
   artwork: {fileID: 21300000, guid: 272814438e077574e9970b55845f47d8, type: 3}
-  Rcorruption: -1
-  Rfamille: 0
-  RMentalHealth: -1
+  Rcorruption: 1
+  Rfamille: 2
+  RMentalHealth: 0
   Rargent: 0
-  Lcorruption: 1
-  Lfamille: 0
-  LMentalHealth: 1
+  Lcorruption: -1
+  Lfamille: -2
+  LMentalHealth: 0
   Largent: 0
   IsSwap: 0

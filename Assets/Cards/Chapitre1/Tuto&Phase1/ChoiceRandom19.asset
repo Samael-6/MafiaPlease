@@ -20,11 +20,11 @@ MonoBehaviour:
   leftchoice: "Refuser et dire qu\u2019on doit se contenter du traitement de base"
   artwork: {fileID: 21300000, guid: b8ddc502b1cb3b042912aabf80412d8c, type: 3}
   Rcorruption: 0
-  Rfamille: 0
+  Rfamille: 2
   RMentalHealth: 1
   Rargent: -1
   Lcorruption: 0
-  Lfamille: 0
+  Lfamille: -2
   LMentalHealth: -1
   Largent: 0
   IsSwap: 0
