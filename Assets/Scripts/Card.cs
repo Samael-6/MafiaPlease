@@ -24,6 +24,8 @@ public class Card : ScriptableObject
     public int LMentalHealth;
     public int Largent;
 
+    public AudioClip son;
+
     public bool IsSwap;
     public void print()
     {
