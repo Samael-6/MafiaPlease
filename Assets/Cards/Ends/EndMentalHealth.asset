@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EndMentalHealth
   m_EditorClassIdentifier: 
   name: MortMental
-  informations: 
-  rightchoice: 
-  leftchoice: 
+  informations: Ce monde est trop cruel. Adieu mon amour, adieu mon fils.
+  rightchoice: C'est fini.
+  leftchoice: C'est fini.
   artwork: {fileID: 21300000, guid: c0499ad7bc53f7740a78ae5528e14d7e, type: 3}
   Rcorruption: 0
   Rfamille: 0
@@ -25,4 +25,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0

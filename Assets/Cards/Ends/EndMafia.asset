@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: EndMafia
   m_EditorClassIdentifier: 
   name: MortMafia
-  informations: 
-  rightchoice: 
-  leftchoice: 
+  informations: "Quelqu'un toque \xE0 ma porte... NON LAISSEZ MOI"
+  rightchoice: C'est fini.
+  leftchoice: C'est fini.
   artwork: {fileID: 21300000, guid: 4d931cb28ca1d964cb1ec9939285339d, type: 3}
   Rcorruption: 0
   Rfamille: 0
@@ -25,4 +25,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: 0
   Largent: 0
+  son: {fileID: 0}
   IsSwap: 0
