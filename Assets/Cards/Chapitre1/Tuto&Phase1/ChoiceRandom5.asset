@@ -26,5 +26,5 @@ MonoBehaviour:
   Lfamille: 0
   LMentalHealth: 2
   Largent: -2
-  son: {fileID: 0}
+  son: {fileID: 8300000, guid: 0ec1c66317b2662419c3fe6d1e52d08b, type: 3}
   IsSwap: 0
