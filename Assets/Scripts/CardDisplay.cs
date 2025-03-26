@@ -32,7 +32,9 @@ public class CardDisplay : MonoBehaviour
 
     public void CardUpdate()
     {
+        int x = Random.Range(4, 5);
         IsUpdate = true;
+        cardsContainer.chapterContainer.soundManagement.SonsJeu[x].Play();
         cardsContainer.chapterContainer.JaugesUpdate();
         //Debug.Log("Index before update : " + index);
         //Debug.Log("``` CardUpdate : cardsContairner.Cards.Count - 1 : " + (cardsContainer.Cards.Count - 1));

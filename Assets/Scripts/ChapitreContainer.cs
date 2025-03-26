@@ -19,6 +19,8 @@ public class ChapitreContainer : MonoBehaviour
     public Vector3 uiPosition;
     public Vector3 uiStartPosition;
 
+    public SoundManagement soundManagement;
+
     private bool IsDead = false;
     private bool IsEnd = false;
     //IEnumerator PlayChapters()
