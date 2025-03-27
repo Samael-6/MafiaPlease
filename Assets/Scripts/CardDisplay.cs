@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using static UnityEngine.Rendering.DebugUI;
 
 public class CardDisplay : MonoBehaviour
 {
@@ -46,6 +47,25 @@ public class CardDisplay : MonoBehaviour
             uiPosition = artwork.transform.position - uiStartPosition;
             //Debug.Log("uiPosition.x : " + uiPosition.x);
             //Debug.Log("Valeur bool condition ChoiceRight : " + (0 < uiPosition.x));
+
+            if (card.son != null)
+            {
+                if (card.son.name == "SD-AppelFemme")
+                {
+                    cardsContainer.chapterContainer.soundManagement.SonsJeu[0].Play();
+                }
+
+                else if (card.son.name == "SD-AppelHomme")
+                {
+                    cardsContainer.chapterContainer.soundManagement.SonsJeu[1].Play();
+                }
+
+                else if (card.son.name == "SD-papierEnveloppe" || card.son.name == "SD-papierEnveloppeBis")
+                {
+                    int x = Random.Range(2, 3);
+                    cardsContainer.chapterContainer.soundManagement.SonsJeu[x].Play();
+                }
+            }
         }
 
         else

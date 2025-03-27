@@ -50,12 +50,12 @@ public class ChapitreContainer : MonoBehaviour
         {
             listCardsContainer[i].gameObject.SetActive(true);
             listCardsContainer[i].BeginPlay();
-            Debug.Log("Nom du chap en cours : " + listCardsContainer[i].name);
+            //Debug.Log("Nom du chap en cours : " + listCardsContainer[i].name);
 
             if (listCardsContainer[i].cardDisplay.IsChapterEnd && !listCardsContainer[i].cardDisplay.IsUpdate)
             {
                 listCardsContainer[i].gameObject.SetActive(false);
-                Debug.Log("Tous les chapitres sont terminés ! ");
+                //Debug.Log("Tous les chapitres sont terminés ! ");
                 IsEnd = true;
                 Ends();
             }
@@ -72,11 +72,6 @@ public class ChapitreContainer : MonoBehaviour
             //Debug.Log("Réinitialisation de listCardsContainer...");
             listCardsContainer = new List<CardsContainer>();
         }
-    }
-
-    private void Update()
-    {
-        Debug.Log("Index I : " + i);
     }
 
     void Start()
@@ -147,7 +142,7 @@ public class ChapitreContainer : MonoBehaviour
 
     public void Ends()
     {
-        Debug.Log("IsDead || IsEnd : " + (IsDead || IsEnd));
+        //Debug.Log("IsDead || IsEnd : " + (IsDead || IsEnd));
         if (IsDead || IsEnd)
         {
             foreach (var jauge in jaugesContainer)
@@ -171,8 +166,8 @@ public class ChapitreContainer : MonoBehaviour
             {
                 if (jaugesValues[z] <= 0 || (jaugesValues[z] >= 10 && z == 0))
                 {
-                    Debug.Log(" ---  Z  --- " + z);
-                    Debug.Log("jaugesValues[z] : " + jaugesValues[z]);
+                    //Debug.Log(" ---  Z  --- " + z);
+                    //Debug.Log("jaugesValues[z] : " + jaugesValues[z]);
 
                     // Vérifier que 'i' est bien dans la limite de listCardsContainer
                     if (i >= listCardsContainer.Count)
@@ -207,31 +202,31 @@ public class ChapitreContainer : MonoBehaviour
                     if (z == 0 && jaugesValues[z] <= 0)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[0]);
-                        Debug.Log("Corruption 0");
+                        //Debug.Log("Corruption 0");
                     }
 
                     else if (z == 0 && jaugesValues[z] >= 10)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[1]);
-                        Debug.Log("Corruption 1");
+                        //Debug.Log("Corruption 1");
                     }
 
                     else if (z == 1)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[2]);
-                        Debug.Log("Famille");
+                        //Debug.Log("Famille");
                     }
 
                     else if (z == 2)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[3]);
-                        Debug.Log("MentalHealth");
+                        //Debug.Log("MentalHealth");
                     }
 
                     else if (z == 3)
                     {
                         listCardsContainer[i].Cards.Add(listEnds[4]);
-                        Debug.Log("Argent");
+                        //Debug.Log("Argent");
                     }
 
                     if (listCardsContainer[i].Cards[listCardsContainer[i].cardDisplay.index + 1] != null)
