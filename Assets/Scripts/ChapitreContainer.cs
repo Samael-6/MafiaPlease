@@ -64,6 +64,8 @@ public class ChapitreContainer : MonoBehaviour
             listCardsContainer[i].cardDisplay.IsChapterEnd = false;
             listCardsContainer[i].gameObject.SetActive(false);
         }
+        IsEnd = true;
+        Ends();
     }
     void OnEnable()
     {
