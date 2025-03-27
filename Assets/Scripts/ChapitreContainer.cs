@@ -155,7 +155,7 @@ public class ChapitreContainer : MonoBehaviour
                 listCardsContainer[i].gameObject.SetActive(false);
             }
 
-            Debug.Log(mainMenu == null);
+            //Debug.Log(mainMenu == null);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             return;
         }

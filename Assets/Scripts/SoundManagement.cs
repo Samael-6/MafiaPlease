@@ -41,5 +41,3 @@ public class SoundManagement : MonoBehaviour
         SonsJeu[7].Play();
     }
 }
-
-//LOL

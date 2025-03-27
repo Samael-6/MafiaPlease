@@ -73,9 +73,11 @@ public class CardDisplay : MonoBehaviour
             gameObject.SetActive(false);
             IsChapterEnd = true;
             IsUpdate = true;
-            Debug.Log("Chapitre finit !!!!!!!!!");
+            //Debug.Log("Chapitre finit !!!!!!!!!");
         }
 
         index++;
     }
 }
+
+// PROUT
