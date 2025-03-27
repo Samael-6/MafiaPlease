@@ -62,6 +62,9 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
         {
             // Si le swipe est suffisant, envoie la carte hors de l'écran et reset après
             //Debug.Log("Distance suffisante");
+            int x = Random.Range(4, 5);
+            cardDisplay.IsUpdate = true;
+            cardDisplay.cardsContainer.chapterContainer.soundManagement.SonsJeu[x].Play();
             float targetX = swipeDistanceX > 0 ? outOfScreenX : -outOfScreenX;
             cardDisplay.choiceRight = 0 < swipeDistanceX;
             cardDisplay.neutralPosition = 0 == swipeDistanceX;
